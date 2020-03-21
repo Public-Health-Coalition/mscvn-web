@@ -1,0 +1,22 @@
+type Query {
+  school: School
+}
+
+type School {
+  data: [SchoolData]
+}
+
+type SchoolData {
+  name: String
+  state: String
+  activities_info: [ActivitiesInfoData]
+}
+
+type ActivitiesInfoData {
+  activity: ActivityData
+  details: String
+}
+
+type ActivityData {
+  name: String
+}
