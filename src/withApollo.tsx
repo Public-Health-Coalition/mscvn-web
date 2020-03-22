@@ -12,7 +12,7 @@ import { ApolloProvider } from 'react-apollo-hooks';
 /* const typeDefs = gql(schema); */
 
 const token =
-  'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTg0ODg5NTIwLCJ0eXBlIjoiYXV0aCIsImtleSI6InB1YmxpYyIsInByb2plY3QiOiJfIn0.0Z1UVhR05LrH1MoUTadfyXNLjhoGNY7Bv4EA31CbA50';
+  'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTg0ODkzMDM3LCJ0eXBlIjoiYXV0aCIsImtleSI6InB1YmxpYyIsInByb2plY3QiOiJfIn0.eetcxZvSKvrgz8w74KFzUmdGIT6742haYPKpo4GCwQc';
 
 const client = new ApolloClient({
   /* resolvers, */
