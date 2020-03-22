@@ -76,13 +76,13 @@ clean:
 	-@rm -rf node_modules/.tmp || true
 
 .PHONY: build
-build: dist
-dist: node_modules/.tmp/coverage/lcov.info $(shell $(GIT) ls-files)
+build: dist/web
+dist/web: node_modules/.tmp/coverage/lcov.info $(shell $(GIT) ls-files)
 	@reactant build web
 
 .PHONY: publish
-publish: dist
-	@gh-pages -d dist
+publish: dist/web
+	@gh-pages -d dist/web
 
 .PHONY: docker-build
 docker-build:
