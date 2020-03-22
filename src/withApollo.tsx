@@ -11,8 +11,10 @@ import { ApolloProvider } from 'react-apollo-hooks';
 
 /* const typeDefs = gql(schema); */
 
-const token =
-  'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTg0ODkzMDM3LCJ0eXBlIjoiYXV0aCIsImtleSI6InB1YmxpYyIsInByb2plY3QiOiJfIn0.eetcxZvSKvrgz8w74KFzUmdGIT6742haYPKpo4GCwQc';
+const config = {
+  token: '',
+  host: 'data.publichealthcoalition.org'
+};
 
 const client = new ApolloClient({
   /* resolvers, */
@@ -28,7 +30,7 @@ const client = new ApolloClient({
       if (networkError) console.log(`[Network error]: ${networkError}`);
     }),
     new HttpLink({
-      uri: `http://18.237.192.124:30591/_/gql?access_token=${token}`
+      uri: `https://${config.host}/_/gql?access_token=${config.token}`
       /* credentials: 'same-origin' */
     })
   ]),
