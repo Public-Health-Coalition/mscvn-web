@@ -1,4 +1,4 @@
-import './usaMap.scss';
+import './usaMap.css';
 import React, { FC } from 'react';
 import ReactUsaMap, { Customize, StatesCustomize } from 'react-usa-map';
 import withStyled from '../../withStyled';
