@@ -22,7 +22,7 @@ const UsaMap: FC<UsaMapProps> = (_props: UsaMapProps) => {
     const schools =
       schoolsData.school?.data?.filter(
         (school: Maybe<SchoolsData>) => school?.state === e.target.dataset.name
-      ) || [];
+      ) || null;
     setSchoolsByState(schools);
   }
 
