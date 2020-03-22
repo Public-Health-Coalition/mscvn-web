@@ -11,6 +11,9 @@ import { ApolloProvider } from 'react-apollo-hooks';
 
 /* const typeDefs = gql(schema); */
 
+const token =
+  'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTg0ODg5NTIwLCJ0eXBlIjoiYXV0aCIsImtleSI6InB1YmxpYyIsInByb2plY3QiOiJfIn0.0Z1UVhR05LrH1MoUTadfyXNLjhoGNY7Bv4EA31CbA50';
+
 const client = new ApolloClient({
   /* resolvers, */
   /* typeDefs, */
@@ -25,8 +28,7 @@ const client = new ApolloClient({
       if (networkError) console.log(`[Network error]: ${networkError}`);
     }),
     new HttpLink({
-      uri:
-        'http://18.237.192.124:30591/_/gql?access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTg0ODI5MDExLCJ0eXBlIjoiYXV0aCIsImtleSI6InB1YmxpYyIsInByb2plY3QiOiJfIn0.rqFIO5_AQCftH5XuLuCjJZbzpX5PIE9k5m3lL0Bli3c'
+      uri: `http://18.237.192.124:30591/_/gql?access_token=${token}`
       /* credentials: 'same-origin' */
     })
   ]),
