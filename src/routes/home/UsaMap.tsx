@@ -1,7 +1,7 @@
 import './usaMap.css';
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import ReactUsaMap, { Customize, StatesCustomize } from 'react-usa-map';
-import withStyled from '../../withStyled';
+import { Dialog, Box, Text } from '@primer/components';
 import {
   useSchools,
   SchoolsData,
@@ -13,31 +13,17 @@ export interface UsaMapProps {}
 
 const UsaMap: FC<UsaMapProps> = (_props: UsaMapProps) => {
   const schoolsData = useSchools().data;
-
-  console.log('schoolsData', schoolsData);
+  const [schoolsByState, setSchoolsByState] = useState<
+    Maybe<SchoolsData>[] | null
+  >(null);
 
   function handleClick(e: any) {
     if (!schoolsData) return null;
-    const schools = schoolsData.school?.data?.filter(
-      (school: Maybe<SchoolsData>) => school?.state === e.target.dataset.name
-    );
-    alert(
-      schools
-        ?.map(
-          (school: Maybe<SchoolsData>) => `
-name: ${school?.name}
-state: ${school?.state}
-activities: ${JSON.stringify(
-            school?.activities_info
-              ?.map(
-                (activity_info: Maybe<SchoolsActivitiesInfo>) =>
-                  `${activity_info?.activity?.name}: ${activity_info?.details}`
-              )
-              .join(' ')
-          )}`
-        )
-        .join('\n\n')
-    );
+    const schools =
+      schoolsData.school?.data?.filter(
+        (school: Maybe<SchoolsData>) => school?.state === e.target.dataset.name
+      ) || [];
+    setSchoolsByState(schools);
   }
 
   function getCustomize(): StatesCustomize {
@@ -56,10 +42,35 @@ activities: ${JSON.stringify(
   return (
     <>
       <ReactUsaMap customize={getCustomize()} onClick={handleClick} />
+      <Dialog
+        title="Title"
+        isOpen={!!schoolsByState}
+        onDismiss={() => setSchoolsByState(null)}
+      >
+        <Box p={3}>
+          <Text fontFamily="sans-serif">
+            {schoolsByState
+              ?.map(
+                (school: Maybe<SchoolsData>) => `
+name: ${school?.name}
+state: ${school?.state}
+activities: ${JSON.stringify(
+                  school?.activities_info
+                    ?.map(
+                      (activity_info: Maybe<SchoolsActivitiesInfo>) =>
+                        `${activity_info?.activity?.name}: ${activity_info?.details}`
+                    )
+                    .join(' ')
+                )}`
+              )
+              .join('\n\n') || ''}
+          </Text>
+        </Box>
+      </Dialog>
     </>
   );
 };
 
 UsaMap.defaultProps = {};
 
-export default withStyled(UsaMap)``;
+export default UsaMap;
