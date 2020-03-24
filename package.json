@@ -31,6 +31,7 @@
     "apollo-link-error": "^1.1.12",
     "apollo-link-http": "^1.5.16",
     "axios": "^0.19.2",
+    "color-hash": "^1.0.3",
     "core-js": "^3.6.4",
     "emotion-theming": "^10.0.27",
     "graphql": "^14.6.0",
@@ -39,6 +40,7 @@
     "react-apollo": "^2.5.7",
     "react-apollo-hooks": "^0.5.0",
     "react-dom": "^16.13.1",
+    "react-ga": "^2.7.0",
     "react-router-dom": "^5.1.2",
     "react-usa-map": "^1.4.0",
     "styled-components": "^5.0.1"
@@ -48,6 +50,7 @@
     "@reactant/cli": "^0.0.321",
     "@reactant/context": "^0.0.321",
     "@reactant/platform": "^0.0.321",
+    "@types/color-hash": "^1.0.0",
     "@types/jest": "^25.1.4",
     "@types/node": "^13.9.3",
     "@types/react": "^16.9.25",

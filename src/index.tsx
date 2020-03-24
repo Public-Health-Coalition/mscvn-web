@@ -2,7 +2,6 @@ import React, { FC } from 'react';
 import { ThemeProvider } from 'emotion-theming';
 import Routes from './routes';
 import theme from './theme';
-
 import withApollo from './withApollo';
 
 export interface AppProps {}

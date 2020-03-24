@@ -1,13 +1,12 @@
 import './usaMap.css';
+import ColorHash from 'color-hash';
 import React, { FC, useState } from 'react';
 import ReactUsaMap, { Customize, StatesCustomize } from 'react-usa-map';
-import { Dialog, Box, Text } from '@primer/components';
-import {
-  useSchools,
-  SchoolsData,
-  Maybe,
-  SchoolsActivitiesInfo
-} from '../../generated/apollo';
+import { Flex, Grid, Flash } from '@primer/components';
+import StateModal from './StateModel';
+import { useSchools, SchoolsData, Maybe } from '../../generated/apollo';
+
+const colorHash = new ColorHash();
 
 export interface UsaMapProps {}
 
@@ -16,6 +15,7 @@ const UsaMap: FC<UsaMapProps> = (_props: UsaMapProps) => {
   const [schoolsByState, setSchoolsByState] = useState<
     Maybe<SchoolsData>[] | null
   >(null);
+  const [state, setState] = useState('');
 
   function handleClick(e: any) {
     if (!schoolsData) return null;
@@ -24,6 +24,7 @@ const UsaMap: FC<UsaMapProps> = (_props: UsaMapProps) => {
         (school: Maybe<SchoolsData>) => school?.state === e.target.dataset.name
       ) || null;
     setSchoolsByState(schools);
+    setState(e.target.dataset.name);
   }
 
   function getCustomize(): StatesCustomize {
@@ -31,7 +32,7 @@ const UsaMap: FC<UsaMapProps> = (_props: UsaMapProps) => {
     return (schoolsData?.school?.data || []).reduce(
       (customize: StatesCustomize, school: Maybe<SchoolsData>) => {
         customize[school?.state || ''] = {
-          fill: 'red'
+          fill: colorHash.hex(JSON.stringify(school))
         } as Customize;
         return customize;
       },
@@ -41,32 +42,25 @@ const UsaMap: FC<UsaMapProps> = (_props: UsaMapProps) => {
 
   return (
     <>
+      <Flex justifyContent="center">
+        <Grid width={150}>
+          <Flash
+            m={0}
+            scheme={schoolsData?.school?.data?.length ? 'green' : 'red'}
+          >
+            {schoolsData?.school?.data?.length
+              ? 'Choose your state'
+              : 'Loading data . . .'}
+          </Flash>
+        </Grid>
+      </Flex>
       <ReactUsaMap customize={getCustomize()} onClick={handleClick} />
-      <Dialog
-        title="Title"
-        isOpen={!!schoolsByState}
+      <StateModal
+        isOpen={!!schoolsByState?.length}
         onDismiss={() => setSchoolsByState(null)}
-      >
-        <Box p={3}>
-          <Text fontFamily="sans-serif">
-            {schoolsByState
-              ?.map(
-                (school: Maybe<SchoolsData>) => `
-name: ${school?.name}
-state: ${school?.state}
-activities: ${JSON.stringify(
-                  school?.activities_info
-                    ?.map(
-                      (activity_info: Maybe<SchoolsActivitiesInfo>) =>
-                        `${activity_info?.activity?.name}: ${activity_info?.details}`
-                    )
-                    .join(' ')
-                )}`
-              )
-              .join('\n\n') || ''}
-          </Text>
-        </Box>
-      </Dialog>
+        schoolsByState={schoolsByState || []}
+        state={state || ''}
+      />
     </>
   );
 };

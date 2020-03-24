@@ -1,5 +1,5 @@
-import { base as preset } from '@theme-ui/presets';
+import { theme as primer } from '@primer/components';
 
 export default {
-  ...preset
+  ...primer
 };
