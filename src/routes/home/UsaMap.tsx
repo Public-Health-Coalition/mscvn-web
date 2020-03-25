@@ -2,7 +2,7 @@ import './usaMap.css';
 import ColorHash from 'color-hash';
 import React, { FC, useState } from 'react';
 import ReactUsaMap, { Customize, StatesCustomize } from 'react-usa-map';
-import { Flex, Grid, Flash } from '@primer/components';
+import { Box, Flex, Grid, Flash } from '@primer/components';
 import StateModal from './StateModel';
 import { useSchools, SchoolsData, Maybe } from '../../generated/apollo';
 
@@ -32,7 +32,7 @@ const UsaMap: FC<UsaMapProps> = (_props: UsaMapProps) => {
     return (schoolsData?.school?.data || []).reduce(
       (customize: StatesCustomize, school: Maybe<SchoolsData>) => {
         customize[school?.state || ''] = {
-          fill: colorHash.hex(JSON.stringify(school))
+          fill: colorHash.hex(JSON.stringify(school)),
         } as Customize;
         return customize;
       },
@@ -54,13 +54,22 @@ const UsaMap: FC<UsaMapProps> = (_props: UsaMapProps) => {
           </Flash>
         </Grid>
       </Flex>
-      <ReactUsaMap customize={getCustomize()} onClick={handleClick} />
+      <ReactUsaMap
+        width={
+          window.innerWidth ||
+          document.documentElement.clientWidth ||
+          document.body.clientWidth
+        }
+        customize={getCustomize()}
+        onClick={handleClick}
+      />
       <StateModal
         isOpen={!!schoolsByState?.length}
         onDismiss={() => setSchoolsByState(null)}
         schoolsByState={schoolsByState || []}
         state={state || ''}
       />
+      <Box mb={8} />
     </>
   );
 };

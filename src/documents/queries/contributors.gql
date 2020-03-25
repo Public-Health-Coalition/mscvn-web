@@ -1,0 +1,11 @@
+query contributors {
+  contributor {
+    data {
+      bio
+      homepage
+      name
+      photo
+      title
+    }
+  }
+}

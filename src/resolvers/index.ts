@@ -1,8 +1,8 @@
 export default {
   Query: {},
-  Mutation: {}
+  Mutation: {},
 };
 
 export const data = {
-  __typename: 'Query'
+  __typename: 'Query',
 };

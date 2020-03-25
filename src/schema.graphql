@@ -1,22 +1,35 @@
 type Query {
-  school: School
+  school: Schools
+  contributor: Contributors
+}
+
+type Contributors {
+  data: [Contributor]
+}
+
+type Contributor {
+  bio: String
+  homepage: String
+  name: String!
+  photo: String
+  title: String
+}
+
+type Schools {
+  data: [School]
 }
 
 type School {
-  data: [SchoolData]
-}
-
-type SchoolData {
   name: String
   state: String
-  activities_info: [ActivitiesInfoData]
+  activities_info: [ActivitiesInfo]
 }
 
-type ActivitiesInfoData {
-  activity: ActivityData
+type ActivitiesInfo {
+  activity: Activity
   details: String
 }
 
-type ActivityData {
+type Activity {
   name: String
 }

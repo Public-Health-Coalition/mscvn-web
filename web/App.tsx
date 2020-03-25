@@ -7,6 +7,6 @@ ReactGA.pageview(`${window.location.pathname}${window.location.search}`);
 
 export interface AppProps {}
 
-const App: React.FC<AppProps> = props => <Reactant {...props} />;
+const App: React.FC<AppProps> = (props) => <Reactant {...props} />;
 
 export default App;

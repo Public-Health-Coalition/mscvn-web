@@ -4,7 +4,7 @@ import { Grid, Flex, Heading, Dialog, Box, Text } from '@primer/components';
 import {
   SchoolsData,
   Maybe,
-  SchoolsActivitiesInfo
+  SchoolsActivitiesInfo,
 } from '../../generated/apollo';
 
 export interface StateModalProps {
@@ -57,7 +57,7 @@ StateModal.defaultProps = {
   isOpen: false,
   onDismiss: () => {},
   schoolsByState: [],
-  state: ''
+  state: '',
 };
 
 export default StateModal;
