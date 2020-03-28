@@ -4,13 +4,13 @@ ifeq ($(PLATFORM), win32)
 endif
 
 NPM := npm
-ifeq ($(shell pnpm --version >/dev/null 2>&1 && echo true || echo false), true)
-	NPM = pnpm
-else
+# ifeq ($(shell pnpm --version >/dev/null 2>&1 && echo true || echo false), true)
+# 	NPM = pnpm
+# else
 ifeq ($(shell yarn --version >/dev/null 2>&1 && echo true || echo false), true)
 	NPM = yarn
 endif
-endif
+# endif
 
 GIT := true
 ifeq ($(shell git --version >/dev/null 2>&1 && echo true || echo false), true)
@@ -45,16 +45,8 @@ spellcheck: node_modules/.make/format
 node_modules/.make/spellcheck: $(shell $(GIT) ls-files | grep -E "\.(j|t)sx?$$")
 	-@$(MAKE) -s spellcheck
 
-.PHONY: generate
-generate: node_modules/.make/spellcheck
-	-@rm -rf src/generated 2>/dev/null || true
-	@mkdir -p src/generated
-	@gql-gen --config codegen.yml
-src/generated/apollo.tsx: $(shell $(GIT) ls-files | grep -E "\.g(raph)?ql$$")
-	@$(MAKE) -s generate
-
 .PHONY: lint
-lint: src/generated/apollo.tsx
+lint: node_modules/.make/spellcheck
 	-@tsc --allowJs --noEmit
 	-@eslint --fix --ext .ts,.tsx .
 	@eslint -f json -o node_modules/.tmp/eslintReport.json --ext .ts,.tsx ./
@@ -78,7 +70,7 @@ clean:
 .PHONY: build
 build: dist/web
 dist/web: node_modules/.tmp/coverage/lcov.info $(shell $(GIT) ls-files)
-	@reactant build web
+	@gatsby build
 
 .PHONY: publish
 publish: dist/web
@@ -90,7 +82,7 @@ docker-build:
 
 .PHONY: start
 start: src/generated/apollo.tsx
-	@reactant start web
+	@gatsby develop
 
 .PHONY: purge
 purge: clean
