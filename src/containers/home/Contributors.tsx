@@ -70,8 +70,8 @@ const Contributors: React.FunctionComponent<ContributorsProps> = (
                   </Box>
                   <Text color="black">
                     Silicon Hills is an Austin based technology company that
-                    empowers buisnesses all over the United States through the
-                    devlopment of custom digital products.
+                    empowers businesses all over the United States through the
+                    development of custom digital products.
                   </Text>
                   <Box mb={2} />
                 </Text>

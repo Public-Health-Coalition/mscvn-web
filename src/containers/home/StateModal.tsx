@@ -19,6 +19,7 @@ const ModalWrapper = styled.div`
     max-height: calc(100vh - 37px);
     overflow-y: auto;
   }
+  overflow-wrap: break-word;
 `;
 
 const StateModal: FC<StateModalProps> = (props: StateModalProps) => {

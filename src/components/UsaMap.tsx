@@ -66,7 +66,11 @@ const UsaMap: FC<UsaMapProps> = (props: UsaMapProps) => {
       window.innerWidth ||
       document.documentElement.clientWidth ||
       document.body.clientWidth;
-    return Math.min(width, 1500);
+    const height =
+      window.innerHeight ||
+      document.documentElement.clientHeight ||
+      document.body.clientHeight;
+    return Math.min(width, Math.min(height * 1.4, 1500));
   }
 
   function getHeight(): number {
