@@ -79,6 +79,7 @@ const UsaMap: FC<UsaMapProps> = (props: UsaMapProps) => {
     return height < width ? width * 0.4 : width * 0.5;
   }
 
+  if (!width || !height) return null;
   return (
     <>
       <ReactUsaMap

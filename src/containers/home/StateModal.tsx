@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import styled from 'styled-components';
 import { Grid, Flex, Heading, Dialog, Box, Text } from '@primer/components';
 import {
   DirectusSchool,
@@ -12,6 +13,13 @@ export interface StateModalProps {
   schoolsByState?: DirectusSchool[];
   state?: string;
 }
+
+const ModalWrapper = styled.div`
+  @media only screen and (max-width: 750px) {
+    max-height: calc(100vh - 37px);
+    overflow-y: auto;
+  }
+`;
 
 const StateModal: FC<StateModalProps> = (props: StateModalProps) => {
   function renderActivities(
@@ -55,9 +63,11 @@ const StateModal: FC<StateModalProps> = (props: StateModalProps) => {
       isOpen={!!props.schoolsByState?.length}
       onDismiss={props.onDismiss!}
     >
-      <Box p={3}>
-        <Text fontFamily="sans-serif">{renderSchools()}</Text>
-      </Box>
+      <ModalWrapper>
+        <Box p={3}>
+          <Text fontFamily="sans-serif">{renderSchools()}</Text>
+        </Box>
+      </ModalWrapper>
     </Dialog>
   );
 };

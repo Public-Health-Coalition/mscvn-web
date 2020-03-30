@@ -17,7 +17,7 @@ const Contributor: FC<ContributorProps> = (props: ContributorProps) => {
         <Flex justifyContent="center" mb={20}>
           <img
             src={props.photo}
-            style={{ borderRadius: '100%', maxWidth: 140 }}
+            style={{ borderRadius: '100%', maxWidth: 140, maxHeight: 140 }}
           />
         </Flex>
       </Link>
