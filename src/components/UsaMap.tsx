@@ -26,7 +26,7 @@ const UsaMap: FC<UsaMapProps> = (props: UsaMapProps) => {
     return Object.entries(props.states || {}).reduce(
       (customize: StatesCustomize, [stateName, stateData]: [string, any]) => {
         customize[stateName] = {
-          fill: colorHash.hex(JSON.stringify(stateData))
+          fill: colorHash.hex(JSON.stringify(stateData)),
         };
         return customize;
       },
@@ -39,11 +39,16 @@ const UsaMap: FC<UsaMapProps> = (props: UsaMapProps) => {
       setWidth(getWidth());
       setHeight(getHeight);
     }
+    if (typeof window === 'undefined') return;
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    return () => {
+      if (typeof window === 'undefined') return;
+      window.removeEventListener('resize', handleResize);
+    };
   }, [width, height]);
 
   function getWidth(): number {
+    if (typeof window === 'undefined') return 0;
     const width =
       window.innerWidth ||
       document.documentElement.clientWidth ||
@@ -52,6 +57,7 @@ const UsaMap: FC<UsaMapProps> = (props: UsaMapProps) => {
   }
 
   function getHeight(): number {
+    if (typeof window === 'undefined') return 0;
     const width = getWidth();
     const height =
       window.innerHeight ||
@@ -74,7 +80,7 @@ const UsaMap: FC<UsaMapProps> = (props: UsaMapProps) => {
 
 UsaMap.defaultProps = {
   onClick: () => {},
-  states: {}
+  states: {},
 };
 
 export default UsaMap;

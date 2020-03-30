@@ -10,13 +10,13 @@ export const theme = {
     normal: 1,
     normalText: 1.5,
     title: 2,
-    text: 2
+    text: 2,
   },
   letterSpacings: {
     normal: 'normal',
     tracked: '0.1em',
     tight: '-0.05em',
-    mega: '0.25em'
+    mega: '0.25em',
   },
   borders: [
     0,
@@ -25,7 +25,7 @@ export const theme = {
     '3px solid',
     '4px solid',
     '5px solid',
-    '6px solid'
+    '6px solid',
   ],
   radius: [3, 4, 5, 10, 20, 30, 60, 120, '50%'],
   widths: [36, 40, 45, 48, 54, 70, 81, 128, 256],
@@ -39,8 +39,8 @@ export const theme = {
       borderColor: colors.primary,
       '&:hover': {
         backgroundColor: colors.primaryHover,
-        borderColor: colors.primaryHover
-      }
-    }
-  }
+        borderColor: colors.primaryHover,
+      },
+    },
+  },
 };

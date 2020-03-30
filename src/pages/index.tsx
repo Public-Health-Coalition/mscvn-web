@@ -1,15 +1,15 @@
 import React, { FC } from 'react';
 import { graphql } from 'gatsby';
-import ActivitiesMap from './home/ActivitiesMap';
-import Contributors from './home/Contributors';
-import GetInvolved from './home/GetInvolved';
+import ActivitiesMap from '../containers/home/ActivitiesMap';
+import Contributors from '../containers/home/Contributors';
+import GetInvolved from '../containers/home/GetInvolved';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import Welcome from './home/Welcome';
+import Welcome from '../containers/home/Welcome';
 import {
   HomeQuery,
   DirectusSchool,
-  DirectusContributor
+  DirectusContributor,
 } from '../../generated/types';
 
 type SchoolEdge = HomeQuery['allDirectusSchool']['edges'][0];

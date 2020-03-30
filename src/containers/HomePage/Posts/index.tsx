@@ -57,7 +57,7 @@ const Posts: React.FunctionComponent<PostsProps> = () => {
             '#e17055',
             '#0984e3',
             '#badc58',
-            '#c7ecee'
+            '#c7ecee',
           ];
           const setColor =
             placeholderColors[

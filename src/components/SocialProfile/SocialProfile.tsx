@@ -2,7 +2,7 @@ import * as React from 'react';
 import {
   SocialProfileWrapper,
   SocialProfileItem,
-  Tooltip
+  Tooltip,
 } from './SocialProfile.style';
 
 type SocialProfileProps = {

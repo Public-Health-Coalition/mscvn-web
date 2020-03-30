@@ -4,13 +4,13 @@ ifeq ($(PLATFORM), win32)
 endif
 
 NPM := npm
-# ifeq ($(shell pnpm --version >/dev/null 2>&1 && echo true || echo false), true)
-# 	NPM = pnpm
-# else
+ifeq ($(shell pnpm --version >/dev/null 2>&1 && echo true || echo false), true)
+	NPM = pnpm
+else
 ifeq ($(shell yarn --version >/dev/null 2>&1 && echo true || echo false), true)
 	NPM = yarn
 endif
-# endif
+endif
 
 GIT := true
 ifeq ($(shell git --version >/dev/null 2>&1 && echo true || echo false), true)
@@ -73,15 +73,15 @@ dist/web: node_modules/.tmp/coverage/lcov.info $(shell $(GIT) ls-files)
 	@gatsby build
 
 .PHONY: publish
-publish: dist/web
-	@gh-pages -d dist/web
+publish: public
+	@gh-pages -d public
 
 .PHONY: docker-build
 docker-build:
 	@reactant build web --docker
 
 .PHONY: start
-start: src/generated/apollo.tsx
+start: install
 	@gatsby develop
 
 .PHONY: purge

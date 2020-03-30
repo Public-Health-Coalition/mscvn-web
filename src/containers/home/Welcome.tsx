@@ -18,7 +18,7 @@ const Welcome: React.FunctionComponent<WelcomeProps> = () => {
             <Text fontSize={5} mb={60}>
               <Box
                 style={{
-                  float: 'left'
+                  float: 'left',
                 }}
                 minWidth={400}
                 maxWidth="30vw"

@@ -9,7 +9,7 @@ import {
   DrawerHead,
   DrawerLogo,
   DrawerClose,
-  HamburgerIcon
+  HamburgerIcon,
 } from './Navbar.style';
 import { FiX } from 'react-icons/fi';
 
@@ -28,7 +28,7 @@ const MobileMenu: React.FunctionComponent<MobileMenuProps> = ({
   // Toggle drawer
   const toggleDrawer = () => {
     dispatch({
-      type: 'TOGGLE'
+      type: 'TOGGLE',
     });
   };
 

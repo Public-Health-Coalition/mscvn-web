@@ -7,12 +7,12 @@ import {
   NotFoundContent,
   NotFoundImage,
   Goback,
-  Icon
+  Icon,
 } from './style';
 
 interface NotFoundProps {}
 
-const NotFound: React.FunctionComponent<NotFoundProps> = props => {
+const NotFound: React.FunctionComponent<NotFoundProps> = (props) => {
   const Data = useStaticQuery(graphql`
     query {
       avatar: file(absolutePath: { regex: "/404.png/" }) {

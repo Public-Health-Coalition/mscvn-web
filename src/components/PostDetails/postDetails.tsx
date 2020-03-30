@@ -9,7 +9,7 @@ import {
   PostPreview,
   PostDescriptionWrapper,
   PostDescription,
-  PostTags
+  PostTags,
 } from './postDetails.style';
 
 type PostDetailsProps = {
@@ -53,7 +53,7 @@ const PostDetails: React.FunctionComponent<PostDetailsProps> = ({
     '#e17055',
     '#0984e3',
     '#badc58',
-    '#c7ecee'
+    '#c7ecee',
   ];
   const setColor =
     placeholderColors[Math.floor(Math.random() * placeholderColors.length)];
@@ -120,7 +120,7 @@ const PostDetails: React.FunctionComponent<PostDetailsProps> = ({
 };
 
 PostDetails.defaultProps = {
-  imagePosition: 'top'
+  imagePosition: 'top',
 };
 
 export default PostDetails;

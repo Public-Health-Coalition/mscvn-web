@@ -36,7 +36,7 @@ const BlogList = (props: any) => {
               '#e17055',
               '#0984e3',
               '#badc58',
-              '#c7ecee'
+              '#c7ecee',
             ];
             const setColor =
               placeholderColors[

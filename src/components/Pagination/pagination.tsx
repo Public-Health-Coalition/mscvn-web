@@ -5,7 +5,7 @@ import {
   PaginationWrapper,
   PrevPage,
   NextPage,
-  PageNumber
+  PageNumber,
 } from './pagination.style';
 
 type PaginationProps = {

@@ -50,7 +50,7 @@ Contributor.defaultProps = {
   bio: '',
   homepage: '',
   photo: '',
-  title: ''
+  title: '',
 };
 
 export default Contributor;

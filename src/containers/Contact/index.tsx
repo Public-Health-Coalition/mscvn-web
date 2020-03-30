@@ -7,7 +7,7 @@ import {
   ContactWrapper,
   ContactPageTitle,
   ContactFromWrapper,
-  InputGroup
+  InputGroup,
 } from './style';
 
 interface MyFormValues {
@@ -18,10 +18,8 @@ interface MyFormValues {
 
 const SignupSchema = Yup.object().shape({
   firstName: Yup.string().required('Required'),
-  email: Yup.string()
-    .email('Invalid email')
-    .required('Required'),
-  message: Yup.string().required('Required')
+  email: Yup.string().email('Invalid email').required('Required'),
+  message: Yup.string().required('Required'),
 });
 
 const Contact: React.SFC<{}> = () => {
@@ -45,7 +43,7 @@ const Contact: React.SFC<{}> = () => {
         errors,
         handleBlur,
         touched,
-        isSubmitting
+        isSubmitting,
       }: FormikProps<MyFormValues>) => (
         <>
           <Form>

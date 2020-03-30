@@ -9,7 +9,7 @@ import {
   PostTitle,
   PostMeta,
   PostDate,
-  PostTags
+  PostTags,
 } from './postList.style';
 
 interface PostListProps {
@@ -69,7 +69,7 @@ const PostList: React.FunctionComponent<PostListProps> = ({
             {date && (
               <PostDate
                 dangerouslySetInnerHTML={{
-                  __html: date
+                  __html: date,
                 }}
                 className="post_date"
               />
@@ -89,7 +89,7 @@ const PostList: React.FunctionComponent<PostListProps> = ({
 };
 
 PostList.defaultProps = {
-  imageType: 'fluid'
+  imageType: 'fluid',
 };
 
 export default PostList;

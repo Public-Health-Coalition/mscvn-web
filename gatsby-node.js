@@ -28,7 +28,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `
-  ).then(result => {
+  ).then((result) => {
     if (result.errors) {
       throw result.errors;
     }
@@ -48,8 +48,8 @@ exports.createPages = ({ graphql, actions }) => {
           slug: post.node.fields.slug,
           previous,
           next,
-          tag: post.node.frontmatter.tags
-        }
+          tag: post.node.frontmatter.tags,
+        },
       });
     });
 
@@ -65,15 +65,15 @@ exports.createPages = ({ graphql, actions }) => {
           limit: postsPerPage,
           skip: i * postsPerPage,
           numPages,
-          currentPage: i + 1
-        }
+          currentPage: i + 1,
+        },
       });
     });
 
     // Tag pages:
     let tags = [];
     // Iterate through each post, putting all found tags into `tags`
-    _.each(posts, edge => {
+    _.each(posts, (edge) => {
       if (_.get(edge, 'node.frontmatter.tags')) {
         tags = tags.concat(edge.node.frontmatter.tags);
       }
@@ -82,13 +82,13 @@ exports.createPages = ({ graphql, actions }) => {
     tags = _.uniq(tags);
 
     // Make tag pages
-    tags.forEach(tag => {
+    tags.forEach((tag) => {
       createPage({
         path: `/tags/${_.kebabCase(tag)}/`,
         component: tagTemplate,
         context: {
-          tag
-        }
+          tag,
+        },
       });
     });
 
@@ -105,14 +105,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       createNodeField({
         node,
         name: 'slug',
-        value: node.frontmatter.slug
+        value: node.frontmatter.slug,
       });
     } else {
       const value = createFilePath({ node, getNode });
       createNodeField({
         node,
         name: 'slug',
-        value
+        value,
       });
     }
   }
@@ -124,7 +124,7 @@ exports.onCreateWebpackConfig = ({ getConfig, stage }) => {
   if (stage.startsWith('develop') && config.resolve) {
     config.resolve.alias = {
       ...config.resolve.alias,
-      'react-dom': '@hot-loader/react-dom'
+      'react-dom': '@hot-loader/react-dom',
     };
   }
 };

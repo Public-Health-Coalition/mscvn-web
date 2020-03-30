@@ -9,7 +9,7 @@ import {
   PostDate,
   PostTitle,
   Excerpt,
-  PostTags
+  PostTags,
 } from './postCardModern.style';
 
 interface PostCardModernProps {
@@ -66,7 +66,7 @@ const PostCardModern: React.FunctionComponent<PostCardModernProps> = ({
           {date && (
             <PostDate
               dangerouslySetInnerHTML={{
-                __html: date
+                __html: date,
               }}
               className="post_date"
             />
@@ -90,7 +90,7 @@ const PostCardModern: React.FunctionComponent<PostCardModernProps> = ({
         {description && (
           <Excerpt
             dangerouslySetInnerHTML={{
-              __html: description
+              __html: description,
             }}
             className="excerpt"
           />
@@ -101,7 +101,7 @@ const PostCardModern: React.FunctionComponent<PostCardModernProps> = ({
 };
 
 PostCardModern.defaultProps = {
-  imageType: 'fluid'
+  imageType: 'fluid',
 };
 
 export default PostCardModern;

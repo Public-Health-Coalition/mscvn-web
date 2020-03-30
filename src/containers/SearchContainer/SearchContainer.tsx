@@ -8,7 +8,7 @@ import {
   SearchWrapper,
   SearchForm,
   SearchResult,
-  NoResult
+  NoResult,
 } from './SearchContainer.style';
 
 function Search() {
@@ -52,7 +52,7 @@ function Search() {
     const queryResult = search.search(e.target.value);
     dispatch({
       type: 'SET_SEARCH_QUERY',
-      payload: { searchQuery: e.target.value, searchResults: queryResult }
+      payload: { searchQuery: e.target.value, searchResults: queryResult },
     });
   };
   const handleSubmit = (e: any) => {
@@ -64,7 +64,7 @@ function Search() {
       dataset.forEach(({ node }: any) => {
         let formatedData = {
           ...node.frontmatter,
-          slug: node.fields.slug
+          slug: node.fields.slug,
         };
         data.push(formatedData);
       });
@@ -74,7 +74,7 @@ function Search() {
       if (dataToSearch) {
         dispatch({
           type: 'SET_SEARCH',
-          payload: dataToSearch
+          payload: dataToSearch,
         });
       }
     }
@@ -118,7 +118,7 @@ function Search() {
                 '#e17055',
                 '#0984e3',
                 '#badc58',
-                '#c7ecee'
+                '#c7ecee',
               ];
               const setColor =
                 placeholderColors[

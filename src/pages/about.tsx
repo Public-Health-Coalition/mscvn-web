@@ -5,7 +5,7 @@ import About from '../containers/About';
 
 type AboutPageProps = {};
 
-const AboutPage: React.FunctionComponent<AboutPageProps> = props => {
+const AboutPage: React.FunctionComponent<AboutPageProps> = (props) => {
   return (
     <Layout>
       <SEO

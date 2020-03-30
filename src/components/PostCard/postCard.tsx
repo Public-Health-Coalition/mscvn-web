@@ -10,7 +10,7 @@ import {
   PostTitle,
   Excerpt,
   PostContent,
-  PostTags
+  PostTags,
 } from './postCard.style';
 
 interface PostCardProps {
@@ -71,7 +71,7 @@ const PostCard: React.FunctionComponent<PostCardProps> = ({
         {date && (
           <PostDate
             dangerouslySetInnerHTML={{
-              __html: date
+              __html: date,
             }}
             className="post_date"
           />
@@ -84,7 +84,7 @@ const PostCard: React.FunctionComponent<PostCardProps> = ({
           {description && (
             <Excerpt
               dangerouslySetInnerHTML={{
-                __html: description
+                __html: description,
               }}
               className="excerpt"
             />
@@ -106,7 +106,7 @@ const PostCard: React.FunctionComponent<PostCardProps> = ({
 };
 
 PostCard.defaultProps = {
-  imageType: 'fluid'
+  imageType: 'fluid',
 };
 
 export default PostCard;
