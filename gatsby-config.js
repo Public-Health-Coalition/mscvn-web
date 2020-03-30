@@ -6,7 +6,7 @@ require('@babel/polyfill');
 
 module.exports = {
   siteMetadata: {
-    title: `StoryHub`,
+    title: `Public Health Coalition`,
     author: `Monnisa`,
     about: `Breakfast procuring no end happiness allowance assurance frank. Met simplicity nor difficulty unreserved who. Entreaties mr conviction dissimilar me
     astonished estimating cultivated.`,
@@ -110,7 +110,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: "UA-161712632-1",
       }
     },
     {
