@@ -1,5 +1,6 @@
 import React, { FC, useState } from 'react';
-import { Flex, Grid, Heading } from '@primer/components';
+import SelectUsStates from 'react-select-us-states';
+import { Box, Flex, Grid, Heading } from '@primer/components';
 import StateModal from './StateModal';
 import UsaMap from '../../components/UsaMap';
 import { BannerWrapper } from './activitiesMap/style';
@@ -27,7 +28,7 @@ const ActivityMap: FC<ActivityMapProps> = (props: ActivityMapProps) => {
     (states: StatesData, school: DirectusSchool) => {
       if (!school.state || !school.activities_info?.length) return states;
       const stateData: StateData = {
-        schools: [...(states[school.state] || { schools: [] }).schools, school],
+        schools: [...(states[school.state] || { schools: [] }).schools, school]
       };
       states[school.state] = stateData;
       return states;
@@ -41,6 +42,12 @@ const ActivityMap: FC<ActivityMapProps> = (props: ActivityMapProps) => {
     setState(e.target.dataset.name || null);
   }
 
+  function handleSelectUsStatesChange(stateName: string) {
+    if (!stateName.length || !states[stateName]) return null;
+    setSchoolsByState(states[stateName].schools);
+    setState(stateName);
+  }
+
   return (
     <BannerWrapper>
       <Flex justifyContent="center">
@@ -52,6 +59,11 @@ const ActivityMap: FC<ActivityMapProps> = (props: ActivityMapProps) => {
             Choose Your State
           </Heading>
           <UsaMap states={states} onClick={handleClick} />
+          {/* <Flex justifyContent="center">
+              <Box maxWidth={160} pt={5}>
+              <SelectUsStates onChange={handleSelectUsStatesChange} />
+              </Box>
+              </Flex> */}
         </Grid>
       </Flex>
       <StateModal
