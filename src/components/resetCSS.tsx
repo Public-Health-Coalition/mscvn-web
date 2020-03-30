@@ -63,7 +63,7 @@ const ResetCSS = createGlobalStyle`
     line-height: 2;
     margin: 0 0 1.7em 0;
   }
-  
+
   input, textarea, select, button{font-family: 'Fira Sans',sans-serif;}
 
   ul,ol {
@@ -129,16 +129,16 @@ const ResetCSS = createGlobalStyle`
       box-shadow: 0 0 15px rgba(0,0,0,.08);
       .navbar{
         @media (min-width: 1400px) {
-          padding-top: 25px;
-          padding-bottom: 25px;
+          padding-top: 10px;
+          padding-bottom: 10px;
         }
         @media (min-width: 1200px) {
-          padding-top: 20px;
-          padding-bottom: 20px;
+          padding-top: 10px;
+          padding-bottom: 10px;
         }
       }
     }
-    
+
   }
 `;
 export default ResetCSS;
