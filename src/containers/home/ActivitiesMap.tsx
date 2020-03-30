@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
-import SelectUsStates from 'react-select-us-states';
-import { Box, Flex, Grid, Heading } from '@primer/components';
+/* import SelectUsStates from 'react-select-us-states'; */
+import { /* Box, */ Flex, Grid, Heading } from '@primer/components';
 import StateModal from './StateModal';
 import UsaMap from '../../components/UsaMap';
 import { BannerWrapper } from './activitiesMap/style';
@@ -42,11 +42,11 @@ const ActivityMap: FC<ActivityMapProps> = (props: ActivityMapProps) => {
     setState(e.target.dataset.name || null);
   }
 
-  function handleSelectUsStatesChange(stateName: string) {
-    if (!stateName.length || !states[stateName]) return null;
-    setSchoolsByState(states[stateName].schools);
-    setState(stateName);
-  }
+  /* function handleSelectUsStatesChange(stateName: string) {
+   *   if (!stateName.length || !states[stateName]) return null;
+   *   setSchoolsByState(states[stateName].schools);
+   *   setState(stateName);
+   * } */
 
   return (
     <BannerWrapper>
