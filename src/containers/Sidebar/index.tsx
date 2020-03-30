@@ -10,7 +10,7 @@ import {
   WidgetTitle,
   TagItem,
   InstagramWrapper,
-  InstagramPhoto
+  InstagramPhoto,
 } from './style';
 
 type SidebarProps = {};
@@ -24,6 +24,7 @@ const Sidebar: React.FunctionComponent<SidebarProps> = () => {
       ) {
         edges {
           node {
+            excerpt(pruneLength: 300)
             fields {
               slug
             }
@@ -98,7 +99,7 @@ const Sidebar: React.FunctionComponent<SidebarProps> = () => {
             '#e17055',
             '#0984e3',
             '#badc58',
-            '#c7ecee'
+            '#c7ecee',
           ];
           const setColor =
             placeholderColors[
@@ -150,7 +151,7 @@ const Sidebar: React.FunctionComponent<SidebarProps> = () => {
                 '#e17055',
                 '#0984e3',
                 '#badc58',
-                '#c7ecee'
+                '#c7ecee',
               ];
               const setColor =
                 placeholderColors[

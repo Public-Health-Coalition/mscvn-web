@@ -16,6 +16,7 @@ const Banner: React.FunctionComponent<BannerProps> = () => {
         totalCount
         edges {
           node {
+            excerpt(pruneLength: 300)
             fields {
               slug
             }
@@ -58,7 +59,7 @@ const Banner: React.FunctionComponent<BannerProps> = () => {
               '#e17055',
               '#0984e3',
               '#badc58',
-              '#c7ecee'
+              '#c7ecee',
             ];
             const setColor =
               placeholderColors[
