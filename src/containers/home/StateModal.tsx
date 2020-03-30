@@ -4,7 +4,7 @@ import { Grid, Flex, Heading, Dialog, Box, Text } from '@primer/components';
 import {
   DirectusSchool,
   Maybe,
-  DirectusActivityInfo,
+  DirectusActivityInfo
 } from '../../../generated/types';
 
 export interface StateModalProps {
@@ -19,7 +19,14 @@ const ModalWrapper = styled.div`
     max-height: calc(100vh - 37px);
     overflow-y: auto;
   }
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -ms-word-break: break-all;
+  -webkit-hyphens: auto;
+  hyphens: auto;
   overflow-wrap: break-word;
+  word-break: break-word;
+  word-wrap: break-word;
 `;
 
 const StateModal: FC<StateModalProps> = (props: StateModalProps) => {
@@ -77,7 +84,7 @@ StateModal.defaultProps = {
   isOpen: false,
   onDismiss: () => {},
   schoolsByState: [],
-  state: '',
+  state: ''
 };
 
 export default StateModal;
