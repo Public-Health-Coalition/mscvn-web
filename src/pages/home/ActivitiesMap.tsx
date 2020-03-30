@@ -1,9 +1,9 @@
 import React, { FC, useState } from 'react';
-import { Flex } from '@primer/components';
-import UsaMap from '../../components/UsaMap';
-import { BannerWrapper, BannerInner } from './activitiesMap/style';
-import { DirectusSchool } from '../../../generated/types';
+import { Flex, Grid, Heading } from '@primer/components';
 import StateModal from './StateModal';
+import UsaMap from '../../components/UsaMap';
+import { BannerWrapper } from './activitiesMap/style';
+import { DirectusSchool } from '../../../generated/types';
 
 export interface ActivityMapProps {
   schools: DirectusSchool[];
@@ -25,7 +25,7 @@ const ActivityMap: FC<ActivityMapProps> = (props: ActivityMapProps) => {
 
   const states: StatesData = props.schools.reduce(
     (states: StatesData, school: DirectusSchool) => {
-      if (!school.state) return states;
+      if (!school.state || !school.activities_info?.length) return states;
       const stateData: StateData = {
         schools: [...(states[school.state] || { schools: [] }).schools, school]
       };
@@ -43,9 +43,16 @@ const ActivityMap: FC<ActivityMapProps> = (props: ActivityMapProps) => {
 
   return (
     <BannerWrapper>
-      <BannerInner></BannerInner>
       <Flex justifyContent="center">
-        <UsaMap states={states} onClick={handleClick} />
+        <Grid>
+          <Heading fontSize={8} textAlign="center" mb={2} p={2}>
+            Medical Student COVID-19 Volunteer Network (MSCVN)
+          </Heading>
+          <Heading fontSize={6} textAlign="center" p={2}>
+            Choose Your State
+          </Heading>
+          <UsaMap states={states} onClick={handleClick} />
+        </Grid>
       </Flex>
       <StateModal
         isOpen={!!schoolsByState?.length && !!state}

@@ -1,9 +1,16 @@
 import React, { FC } from 'react';
 import { graphql } from 'gatsby';
 import ActivitiesMap from './home/ActivitiesMap';
+import Contributors from './home/Contributors';
+import GetInvolved from './home/GetInvolved';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import { HomeQuery } from '../../generated/types';
+import Welcome from './home/Welcome';
+import {
+  HomeQuery,
+  DirectusSchool,
+  DirectusContributor
+} from '../../generated/types';
 
 type SchoolEdge = HomeQuery['allDirectusSchool']['edges'][0];
 
@@ -15,7 +22,9 @@ const Home: FC<HomeProps> = (props: HomeProps) => {
   const { data } = props;
   const schools = data.allDirectusSchool.edges.map(
     (schoolEdge: SchoolEdge) => schoolEdge.node
-  );
+  ) as DirectusSchool[];
+  const contributors = data.allDirectusContributor
+    .nodes as DirectusContributor[];
   return (
     <Layout>
       <SEO
@@ -23,6 +32,9 @@ const Home: FC<HomeProps> = (props: HomeProps) => {
         description={data.site?.siteMetadata?.description || ''}
       />
       <ActivitiesMap schools={schools} />
+      <Welcome />
+      <GetInvolved />
+      <Contributors contributors={contributors} />
     </Layout>
   );
 };
@@ -41,11 +53,28 @@ export const pageQuery = graphql`
             status
             id
             created_on
+            activity {
+              name
+              id
+              created_on
+            }
           }
           status
           id
           created_on
         }
+      }
+    }
+    allDirectusContributor {
+      nodes {
+        bio
+        created_on
+        id
+        homepage
+        name
+        photo
+        title
+        status
       }
     }
     site {

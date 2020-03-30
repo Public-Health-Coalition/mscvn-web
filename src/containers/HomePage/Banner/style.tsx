@@ -5,7 +5,7 @@ import BannerBG from '../../../images/banner-bg.jpg';
 export const BannerWrapper = styled.div`
   position: relative;
   padding: 90px 0;
-  background-color: #d96233;
+  background-color: #ffffff;
   background-image: url(${BannerBG});
   background-size: cover;
   background-position: center;

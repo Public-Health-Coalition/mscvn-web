@@ -15,6 +15,9 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: 'gatsby-plugin-mdx'
+    },
+    {
       resolve: '@directus/gatsby-source-directus',
       options: {
         url: `https://data.publichealthcoalition.org`,
@@ -110,7 +113,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-161712632-1",
+        trackingId: 'UA-161712632-1'
       }
     },
     {

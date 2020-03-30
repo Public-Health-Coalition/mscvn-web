@@ -18,25 +18,35 @@ const StateModal: FC<StateModalProps> = (props: StateModalProps) => {
     activitiesInfo: Maybe<Array<Maybe<DirectusActivityInfo>>>
   ) {
     return activitiesInfo?.map((activityInfo: Maybe<DirectusActivityInfo>) => (
-      <Text mb={4}>
-        <Text fontStyle="italic">{activityInfo?.activity?.name}: </Text>
-        {activityInfo?.details}
+      <Text mb={4} textAlign="left">
+        <Text fontStyle="italic" fontWeight="bold" fontSize={4}>
+          {activityInfo?.activity?.name}:{' '}
+        </Text>
+        <div
+          dangerouslySetInnerHTML={{ __html: activityInfo?.details || '' }}
+        />
       </Text>
     ));
   }
 
   function renderSchools() {
-    return props.schoolsByState?.map((school: DirectusSchool) => (
-      <Flex>
-        <Grid>
-          <Heading fontSize={2} mb={4} textAlign="center">
-            {school?.name}
-          </Heading>
-          {renderActivities(school.activities_info || [])}
-          <Box mb={5} />
-        </Grid>
-      </Flex>
-    ));
+    let first = true;
+    return props.schoolsByState?.map((school: DirectusSchool) => {
+      if (!school.activities_info?.length) return null;
+      const result = (
+        <Flex>
+          <Grid>
+            {first ? null : <Box mb={10} />}
+            <Heading fontSize={6} mb={4} textAlign="center">
+              {school?.name}
+            </Heading>
+            {renderActivities(school.activities_info || [])}
+          </Grid>
+        </Flex>
+      );
+      first = false;
+      return result;
+    });
   }
 
   return (

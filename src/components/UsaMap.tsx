@@ -1,6 +1,6 @@
 import './usaMap/style.css';
 import ColorHash from 'color-hash';
-import React, { FC } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import ReactUsaMap, { StatesCustomize } from 'react-usa-map';
 
 const colorHash = new ColorHash();
@@ -15,6 +15,9 @@ export interface UsaMapProps {
 }
 
 const UsaMap: FC<UsaMapProps> = (props: UsaMapProps) => {
+  const [height, setHeight] = useState<number | null>(getHeight());
+  const [width, setWidth] = useState<number | null>(getWidth);
+
   function handleClick(e: any) {
     props.onClick!(props.states![e.target.dataset.name], e);
   }
@@ -31,16 +34,39 @@ const UsaMap: FC<UsaMapProps> = (props: UsaMapProps) => {
     );
   }
 
+  useEffect(() => {
+    function handleResize() {
+      setWidth(getWidth());
+      setHeight(getHeight);
+    }
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [width, height]);
+
+  function getWidth(): number {
+    const width =
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
+    return Math.min(width, 1500);
+  }
+
+  function getHeight(): number {
+    const width = getWidth();
+    const height =
+      window.innerHeight ||
+      document.documentElement.clientHeight ||
+      document.body.clientHeight;
+    return height < width ? width * 0.4 : width * 0.5;
+  }
+
   return (
     <>
       <ReactUsaMap
-        width={
-          window.innerWidth ||
-          document.documentElement.clientWidth ||
-          document.body.clientWidth
-        }
         customize={getCustomize()}
+        height={height}
         onClick={handleClick}
+        width={width}
       />
     </>
   );

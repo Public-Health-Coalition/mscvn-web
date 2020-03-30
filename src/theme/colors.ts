@@ -7,10 +7,10 @@ const colors = {
   inactiveField: '#F7F7F7', // 5
   inactiveColor: '#767676', // 6
   inactiveBG: '#e6e6e6', // 7
-  borderColor: '#DBDBDB', // 8
+  borderColor: '#00bbf7', // 8
   lightBorderColor: '#ededed', //9
-  primary: '#D10068', // 10
-  primaryHover: '#D10068' // 11
+  primary: '#ffbb00', // 10
+  primaryHover: '#ffbb00' // 11
 };
 
 export default colors;

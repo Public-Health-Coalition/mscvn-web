@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import { IoIosSearch, IoIosClose } from 'react-icons/io';
+import { IoIosClose } from 'react-icons/io';
 import { DrawerProvider } from '../Drawer/DrawerContext';
 import Menu from './Menu';
 import MobileMenu from './MobileMenu';
@@ -9,7 +9,6 @@ import HeaderWrapper, {
   NavbarWrapper,
   Logo,
   MenuWrapper,
-  NavSearchButton,
   NavSearchWrapper,
   SearchCloseButton,
   NavSearchFromWrapper
@@ -22,16 +21,12 @@ type NavbarProps = {
 
 const MenuItems = [
   {
-    label: 'Home',
-    url: '/'
+    label: 'Welcome',
+    url: '/#welcome'
   },
   {
-    label: 'About',
-    url: '/about'
-  },
-  {
-    label: 'Contact',
-    url: '/contact'
+    label: 'Get Involved',
+    url: '/#get-involved'
   }
 ];
 
@@ -73,13 +68,13 @@ const Navbar: React.FunctionComponent<NavbarProps> = ({
         <MenuWrapper>
           <Menu items={MenuItems} />
         </MenuWrapper>
-        <NavSearchButton
-          type="button"
-          aria-label="search"
-          onClick={toggleHandle}
-        >
-          <IoIosSearch size="23px" />
-        </NavSearchButton>
+        {/* <NavSearchButton
+            type="button"
+            aria-label="search"
+            onClick={toggleHandle}
+            >
+            <IoIosSearch size="23px" />
+            </NavSearchButton> */}
       </NavbarWrapper>
 
       <NavSearchWrapper className={state.toggle === true ? 'expand' : ''}>
