@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{prRy:function(t,n,r){"use strict";r.d(n,"a",(function(){return o}));var e=r("aq9L"),o=function(t){return Object(e.a)({tag:"svg",attr:{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"},child:[{tag:"line",attr:{x1:"18",y1:"6",x2:"6",y2:"18"}},{tag:"line",attr:{x1:"6",y1:"6",x2:"18",y2:"18"}}]})(t)};o.displayName="FiX"}}]);
-//# sourceMappingURL=c15971a6-4c065db3c130d0e1470a.js.map
