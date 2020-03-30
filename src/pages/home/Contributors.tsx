@@ -27,7 +27,7 @@ const Contributors: React.FunctionComponent<ContributorsProps> = (
 
   return (
     <>
-      <Box id="Contributors" />
+      <Box id="contributors" />
       <BlogContributorsWrapper>
         <Heading textAlign="center" mb={10}>
           Contributors

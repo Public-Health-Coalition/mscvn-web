@@ -27,6 +27,10 @@ const MenuItems = [
   {
     label: 'Get Involved',
     url: '/#get-involved'
+  },
+  {
+    label: 'Contributors',
+    url: '/#contributors'
   }
 ];
 
