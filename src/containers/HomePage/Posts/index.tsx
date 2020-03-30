@@ -16,7 +16,6 @@ const Posts: React.FunctionComponent<PostsProps> = () => {
         totalCount
         edges {
           node {
-            excerpt(pruneLength: 200)
             fields {
               slug
             }
@@ -57,7 +56,7 @@ const Posts: React.FunctionComponent<PostsProps> = () => {
             '#e17055',
             '#0984e3',
             '#badc58',
-            '#c7ecee',
+            '#c7ecee'
           ];
           const setColor =
             placeholderColors[
