@@ -42,15 +42,16 @@ const Contributors: React.FunctionComponent<ContributorsProps> = (
             }}
           >
             <Flex
-              justifyContent="center"
-              mb={10}
-              maxWidth={800}
               alignItems="center"
+              flexWrap="wrap"
+              justifyContent="center"
+              maxWidth={800}
+              mb={10}
             >
-              <Box mr={10}>
+              <Box margin={5}>
                 <img alt="Silicon Hills" src={siliconHillsJpg} />
               </Box>
-              <Box>
+              <Box margin={5} maxWidth={400}>
                 <Heading
                   textAlign="center"
                   fontSize="22px"

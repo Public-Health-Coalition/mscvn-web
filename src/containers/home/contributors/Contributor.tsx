@@ -34,13 +34,13 @@ const Contributor: FC<ContributorProps> = (props: ContributorProps) => {
         {props.title}
       </Heading>
       <Text textAlign="center">
-        <Text>{props.bio}</Text>
-        <Box mb={2} />
         <Link href={props.homepage} target="_blank" mb={2}>
           <Heading fontSize={1} textAlign="center">
             {props.homepage}
           </Heading>
         </Link>
+        <Box mb={2} />
+        <Text>{props.bio}</Text>
       </Text>
     </Box>
   );

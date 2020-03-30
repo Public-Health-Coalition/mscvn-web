@@ -40,6 +40,14 @@ const UsaMap: FC<UsaMapProps> = (props: UsaMapProps) => {
   }, []);
 
   useEffect(() => {
+    const interval = setInterval(() => {
+      if (!width) setWidth(getWidth());
+      if (!height) setHeight(getHeight);
+      if (width && height) clearInterval(interval);
+    }, 500);
+  }, []);
+
+  useEffect(() => {
     function handleResize() {
       setWidth(getWidth());
       setHeight(getHeight);
