@@ -14,7 +14,7 @@ const Contributors: React.FunctionComponent<ContributorsProps> = (
 ) => {
   function renderContributors() {
     return props.contributors.map((contributor: DirectusContributor) => (
-      <Flex flex="1 1 20%">
+      <Flex flex="1 1 20%" justifyContent="center">
         <Contributor
           bio={contributor?.bio!}
           homepage={contributor?.homepage!}
