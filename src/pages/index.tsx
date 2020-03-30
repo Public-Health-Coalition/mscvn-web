@@ -19,7 +19,7 @@ const Home: FC<HomeProps> = (props: HomeProps) => {
   return (
     <Layout>
       <SEO
-        title="Personal Blog"
+        title="Home"
         description={data.site?.siteMetadata?.description || ''}
       />
       <ActivitiesMap schools={schools} />
