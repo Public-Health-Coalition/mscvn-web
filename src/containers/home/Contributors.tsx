@@ -38,7 +38,7 @@ const Contributors: React.FunctionComponent<ContributorsProps> = (
             href="https://siliconhills.dev"
             target="_blank"
             style={{
-              textDecoration: 'none'
+              textDecoration: 'none',
             }}
           >
             <Flex
