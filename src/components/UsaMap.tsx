@@ -1,6 +1,6 @@
 import './usaMap/style.css';
 import ColorHash from 'color-hash';
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useEffect, useState, useLayoutEffect } from 'react';
 import ReactUsaMap, { StatesCustomize } from 'react-usa-map';
 
 const colorHash = new ColorHash();
@@ -33,6 +33,11 @@ const UsaMap: FC<UsaMapProps> = (props: UsaMapProps) => {
       {}
     );
   }
+
+  useLayoutEffect(() => {
+    setWidth(getWidth());
+    setHeight(getHeight);
+  }, []);
 
   useEffect(() => {
     function handleResize() {

@@ -68,9 +68,10 @@ clean:
 	-@rm -rf node_modules/.tmp || true
 
 .PHONY: build
-build: dist/web
-dist/web: node_modules/.tmp/coverage/lcov.info $(shell $(GIT) ls-files)
+build: public
+public: node_modules/.tmp/coverage/lcov.info $(shell $(GIT) ls-files)
 	@gatsby build
+	@echo publichealthcoalition.org > public/CNAME
 
 .PHONY: publish
 publish: public

@@ -7,10 +7,9 @@ require('@babel/polyfill');
 module.exports = {
   siteMetadata: {
     title: `Public Health Coalition`,
-    author: `Monnisa`,
-    about: `Breakfast procuring no end happiness allowance assurance frank. Met simplicity nor difficulty unreserved who. Entreaties mr conviction dissimilar me
-    astonished estimating cultivated.`,
-    description: `A Gatsby Blog`,
+    author: `Public Health Coalition`,
+    about: `Medical Student COVID-19 Volunteer Network (MSCVN)`,
+    description: `Medical Student COVID-19 Volunteer Network (MSCVN)`,
     siteUrl: `https://storyhub-personal-tarex.redq.now.sh`,
   },
   plugins: [
