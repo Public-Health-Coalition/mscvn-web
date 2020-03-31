@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Image from 'gatsby-image';
-import { useStaticQuery, graphql, Link } from 'gatsby';
+import { Link } from 'gatsby';
 import { IoMdArrowRoundBack } from 'react-icons/io';
+import ImageWrapper from '../home/Welcome'
 import {
   NotFoundWrapper,
   NotFoundContent,
@@ -9,34 +9,19 @@ import {
   Goback,
   Icon,
 } from './style';
+import notFoundSvg from '../../../content/assets/not_found.svg';
 
 interface NotFoundProps {}
 
 const NotFound: React.FunctionComponent<NotFoundProps> = (props) => {
-  const Data = useStaticQuery(graphql`
-    query {
-      avatar: file(absolutePath: { regex: "/404.png/" }) {
-        childImageSharp {
-          fluid(maxWidth: 750, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      site {
-        siteMetadata {
-          author
-          about
-        }
-      }
-    }
-  `);
+  
 
   return (
     <NotFoundWrapper>
       <NotFoundContent>
-        <h1>This Page Was Lost</h1>
+        <h1>Page Not Found</h1>
         <p>
-          The Page You are looking for isn’t available. Try to search again or
+          The page you are looking for isn’t available. Try to search again or
           use the Go Back button below.
         </p>
         <Goback>
@@ -49,7 +34,7 @@ const NotFound: React.FunctionComponent<NotFoundProps> = (props) => {
         </Goback>
       </NotFoundContent>
       <NotFoundImage>
-        <Image fluid={Data.avatar.childImageSharp.fluid} alt="author" />
+        <img width="300px" src={notFoundSvg} />
       </NotFoundImage>
     </NotFoundWrapper>
   );

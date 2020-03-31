@@ -15,7 +15,7 @@ const NotFoundPage = (_props: any) => {
       <NotFound />
       <Footer>
         Copyright &copy; {new Date().getFullYear()}
-        <a href="https://redq.io/"> RedQ, Inc.</a>
+        <a href="/"> Public Health Coalition</a>
       </Footer>
     </>
   );
