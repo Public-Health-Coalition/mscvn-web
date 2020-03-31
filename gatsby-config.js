@@ -121,8 +121,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `StoryHub - Personal Blog`,
-        short_name: `StoryHub`,
+        name: `Medical Student COVID-19 Volunteer Network`,
+        short_name: `MSCVN`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
