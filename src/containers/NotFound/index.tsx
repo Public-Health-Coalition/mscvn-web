@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import { IoMdArrowRoundBack } from 'react-icons/io';
-import ImageWrapper from '../home/Welcome'
+import ImageWrapper from '../home/Welcome';
 import {
   NotFoundWrapper,
   NotFoundContent,
@@ -14,8 +14,6 @@ import notFoundSvg from '../../../content/assets/not_found.svg';
 interface NotFoundProps {}
 
 const NotFound: React.FunctionComponent<NotFoundProps> = (props) => {
-  
-
   return (
     <NotFoundWrapper>
       <NotFoundContent>
