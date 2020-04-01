@@ -10,7 +10,7 @@ import {
   WidgetTitle,
   TagItem,
   InstagramWrapper,
-  InstagramPhoto,
+  InstagramPhoto
 } from './style';
 
 type SidebarProps = {};
@@ -48,28 +48,12 @@ const Sidebar: React.FunctionComponent<SidebarProps> = () => {
           fieldValue
         }
       }
-      allInstaNode(limit: 4) {
-        edges {
-          node {
-            id
-            likes
-            comments
-            localFile {
-              childImageSharp {
-                fluid(maxWidth: 100, maxHeight: 100, quality: 100) {
-                  ...GatsbyImageSharpFluid_noBase64
-                }
-              }
-            }
-          }
-        }
-      }
     }
   `);
 
   const Posts = Data.allMarkdownRemark.edges;
   const Tags = Data.allMarkdownRemark.group;
-  const InstagramPhotos = Data.allInstaNode.edges;
+  const InstagramPhotos: any[] = []; // Data.allInstaNode.edges;
 
   return (
     <SidebarWrapper>
@@ -99,7 +83,7 @@ const Sidebar: React.FunctionComponent<SidebarProps> = () => {
             '#e17055',
             '#0984e3',
             '#badc58',
-            '#c7ecee',
+            '#c7ecee'
           ];
           const setColor =
             placeholderColors[
@@ -151,7 +135,7 @@ const Sidebar: React.FunctionComponent<SidebarProps> = () => {
                 '#e17055',
                 '#0984e3',
                 '#badc58',
-                '#c7ecee',
+                '#c7ecee'
               ];
               const setColor =
                 placeholderColors[
