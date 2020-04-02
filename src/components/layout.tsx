@@ -7,7 +7,7 @@ import Footer from './Footer/Footer';
 import ScrollUpButton from './ScrollUpButton/ScrollUpButton';
 import ResetCss from './resetCSS';
 import { theme } from '../theme';
-
+import { Flex, Box } from "@primer/components"
 type LayoutProps = {
   children: React.ReactNode;
 };
@@ -23,11 +23,16 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
         {children}
         {/* <Newsletter /> */}
         <Footer>
-          Copyright &copy; {new Date().getFullYear()}&nbsp;
+          <Flex flexDirection="column"><Box>
+            Copyright &copy; {new Date().getFullYear()}&nbsp;
           <a href="https://publichealthcoalition.org">
-            Public Health Coalition
+              Public Health Coalition
           </a>
           . All Rights Reserved.
+          </Box><Box height="10px" />
+
+            <a href="/privacy-policy">Privacy Policy</a><Box height="10px" /><a href="/public-disclaimer">Public Disclaimer</a>
+          </Flex>
         </Footer>
         <ScrollToTop
           showUnder={300}
