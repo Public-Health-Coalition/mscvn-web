@@ -53,7 +53,7 @@ const ActivityMap: FC<ActivityMapProps> = (props: ActivityMapProps) => {
       <Flex justifyContent="center">
         <Grid>
           <Heading fontSize={8} textAlign="center" mb={2} p={2}>
-            Medical Student COVID-19 Volunteer Network (MSCVN)
+            Medical Student COVID-19 Action Network (MSCAN)
           </Heading>
           <Heading fontSize={6} textAlign="center" p={2}>
             Choose Your State

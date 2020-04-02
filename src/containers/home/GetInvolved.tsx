@@ -49,7 +49,7 @@ const Newsletter: React.FunctionComponent<NewsletterProps> = ({ ...props }) => {
 
           <Text fontSize={6}>
             Interested in participating on our team or sending information for
-            our map? <br /> <br /> Please email mscvn2020@gmail.com.
+            our map? <br /> <br /> Please email office.mscan@gmail.com.
           </Text>
           {/* <NewsletterInputWrapper onSubmit={handleSubmit}>
             {success ? (

@@ -15,7 +15,7 @@ export const ImageWrapper = styled.div`
   }
 `;
 
-export interface WelcomeProps {}
+export interface WelcomeProps { }
 
 const Welcome: React.FunctionComponent<WelcomeProps> = () => {
   return (
@@ -23,7 +23,7 @@ const Welcome: React.FunctionComponent<WelcomeProps> = () => {
       <Box id="welcome" />
       <BlogWelcomeWrapper>
         <Heading textAlign="center" mb={60}>
-          Welcome to the Medical Student COVID-19 Volunteer Network (MSCVN)
+          Welcome to the Medical Student COVID-19 Action Network (MSCAN)
         </Heading>
         <Flex justifyContent="center">
           <Text fontSize={5} mb={60}>
@@ -31,12 +31,16 @@ const Welcome: React.FunctionComponent<WelcomeProps> = () => {
               <img src={socialDistancingSvg} width="100%" />
             </ImageWrapper>
             This is a time of crisis for our world. As it stands, there have
-            been over 690,000 cases of COVID-19, and that number is rising
+            been over 1,000,000 cases of COVID-19, and that number is rising
             daily. At a time when healthcare workers and volunteers around the
             globe are risking their health and well-being for the safety of the
             community, we must help. That’s why we've started the Medical
-            Student COVID-19 Volunteer Network, a united alliance for medical
+            Student COVID-19 Action Network, a united alliance for medical
             students nationwide to play a role in fighting COVID-19.
+            <Box mb={40} />
+            We encourage medical students to engage and connect with the opportunities on this map.
+            Please note that activities without contact information listed may be internal or no longer seeking volunteers.
+            Additionally, please view our statement on activity safety and exercise caution in how you engage.
             <Box mb={40} />
             Our team will maintain an interactive digital map of the United
             States showing all COVID-19-related service opportunities organized
