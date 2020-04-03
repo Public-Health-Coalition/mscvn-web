@@ -6,11 +6,12 @@ require('@babel/polyfill');
 
 module.exports = {
   siteMetadata: {
-    title: `Public Health Coalition`,
+    title: `Medical Student COVID-19 Action Network`,
     author: `Public Health Coalition`,
-    about: `Medical Student COVID-19 Volunteer Network (MSCVN)`,
-    description: `Medical Student COVID-19 Volunteer Network (MSCVN)`,
-    siteUrl: `https://storyhub-personal-tarex.redq.now.sh`,
+    about: `Medical Student COVID-19 Action Network`,
+    description: `This is a time of crisis for our world. As it stands, there have been over 1,000,000 cases of COVID-19, and that number is rising daily.`,
+    siteUrl: `https://publichealthcoalition.org`,
+    thumbnail: `content/assets/thumbnail.png`,
   },
   plugins: [
     {
