@@ -53,7 +53,7 @@ const SEO: React.FunctionComponent<SEOProps> = ({
         },
         {
           property: `og:image`,
-          content: site.siteMetadata.thumbnail,
+          content: thumbnail,
         },
         {
           property: `og:description`,
@@ -73,7 +73,7 @@ const SEO: React.FunctionComponent<SEOProps> = ({
         },
         {
           name: `twitter:image`,
-          content: site.siteMetadata.thumbnail,
+          content: thumbnail,
         },
         {
           name: `twitter:title`,
