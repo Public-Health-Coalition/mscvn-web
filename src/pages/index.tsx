@@ -6,7 +6,8 @@ import GetInvolved from '../containers/home/GetInvolved';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Welcome from '../containers/home/Welcome';
-import thumbnailPng from '../../content/assets/thumbnail.png'
+import facebookThumbnail from '../../content/assets/thumbnail_facebook.png';
+import twitterThumbnail from '../../content/assets/thumbnail_twitter.png';
 import {
   HomeQuery,
   DirectusSchool,
@@ -31,7 +32,8 @@ const Home: FC<HomeProps> = (props: HomeProps) => {
       <SEO
         title="Home"
         description={data.site?.siteMetadata?.description || ''}
-        thumbnail={thumbnailPng}
+        facebookThumbnail={facebookThumbnail}
+        twitterThumbnail={twitterThumbnail}
       />
       <ActivitiesMap schools={schools} />
       <Welcome />
