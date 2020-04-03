@@ -38,10 +38,6 @@ const Welcome: React.FunctionComponent<WelcomeProps> = () => {
             Student COVID-19 Action Network, a united alliance for medical
             students nationwide to play a role in fighting COVID-19.
             <Box mb={40} />
-            We encourage medical students to engage and connect with the opportunities on this map.
-            Please note that activities without contact information listed may be internal or no longer seeking volunteers.
-            Additionally, please view our statement on activity safety and exercise caution in how you engage.
-            <Box mb={40} />
             Our team will maintain an interactive digital map of the United
             States showing all COVID-19-related service opportunities organized
             by medical schools (especially ones that can be done safely at
@@ -49,6 +45,10 @@ const Welcome: React.FunctionComponent<WelcomeProps> = () => {
             students, help displaced students serve from home, alleviate the
             existing burden on the healthcare system, combine resources, support
             medical workers, and promote the exchange of ideas.
+            <Box mb={40} />
+            We encourage medical students to engage and connect with the opportunities on this map.
+            Please note that activities without contact information listed may be internal or no longer seeking volunteers.
+            Additionally, please view our  <a href="https://publichealthcoalition.org/public-disclaimer/" target="_blank">statement on activity safety</a> and exercise caution in how you engage.
             <Box mb={40} />
             Let’s present a united front as future healthcare professionals and
             support the amazing work already being done to stem the tide of
