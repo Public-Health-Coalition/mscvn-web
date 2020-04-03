@@ -7,7 +7,8 @@ type SEOProps = {
   lang?: string;
   meta?: any;
   keywords?: any;
-  thumbnail?: string;
+  facebookThumbnail?: string;
+  twitterThumbnail?: string;
   title: string;
 };
 
@@ -16,7 +17,8 @@ const SEO: React.FunctionComponent<SEOProps> = ({
   lang,
   meta,
   keywords,
-  thumbnail,
+  facebookThumbnail,
+  twitterThumbnail,
   title,
 }) => {
   const { site } = useStaticQuery(
@@ -53,7 +55,7 @@ const SEO: React.FunctionComponent<SEOProps> = ({
         },
         {
           property: `og:image`,
-          content: thumbnail,
+          content: facebookThumbnail,
         },
         {
           property: `og:description`,
@@ -68,12 +70,8 @@ const SEO: React.FunctionComponent<SEOProps> = ({
           content: `summary`,
         },
         {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
           name: `twitter:image`,
-          content: thumbnail,
+          content: twitterThumbnail,
         },
         {
           name: `twitter:title`,
