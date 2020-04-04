@@ -31,7 +31,7 @@ const Welcome: React.FunctionComponent<WelcomeProps> = () => {
               <img src={socialDistancingSvg} width="100%" />
             </ImageWrapper>
             This is a time of crisis for our world. As it stands, there have
-            been over 1,000,000 cases of COVID-19, and that number is rising
+            been well over 1,000,000 cases of COVID-19, and that number is rising
             daily. At a time when healthcare workers and volunteers around the
             globe are risking their health and well-being for the safety of the
             community, we must help. That’s why we've started the Medical
@@ -46,9 +46,7 @@ const Welcome: React.FunctionComponent<WelcomeProps> = () => {
             existing burden on the healthcare system, combine resources, support
             medical workers, and promote the exchange of ideas.
             <Box mb={40} />
-            We encourage medical students to engage and connect with the opportunities on this map.
-            Please note that activities without contact information listed may be internal or no longer seeking volunteers.
-            Additionally, please view our  <a href="https://publichealthcoalition.org/public-disclaimer/" target="_blank">statement on activity safety</a> and exercise caution in how you engage.
+            We encourage you to engage with the opportunities on this map. Please note that activities without contact information may be internal or no longer seeking volunteers. Additionally, please exercise caution and view our <a href="https://publichealthcoalition.org/public-disclaimer/" target="_blank">statement on activity safety</a>.
             <Box mb={40} />
             Let’s present a united front as future healthcare professionals and
             support the amazing work already being done to stem the tide of
