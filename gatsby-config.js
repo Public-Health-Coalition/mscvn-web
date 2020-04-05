@@ -10,7 +10,7 @@ module.exports = {
     author: `Public Health Coalition`,
     about: `Medical Student COVID-19 Action Network`,
     description: `This is a time of crisis for our world. As it stands, there have been over 1,000,000 cases of COVID-19, and that number is rising daily.`,
-    siteUrl: `https://publichealthcoalition.org`
+    siteUrl: `https://publichealthcoalition.org`,
   },
   plugins: [
     {

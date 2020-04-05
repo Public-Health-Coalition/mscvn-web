@@ -40,7 +40,9 @@ const Contributor: FC<ContributorProps> = (props: ContributorProps) => {
           </Heading>
         </Link>
         <Box mb={2} />
-        <Box textAlign="center"><Text fontSize={2}>{props.bio}</Text></Box>
+        <Box textAlign="center">
+          <Text fontSize={2}>{props.bio}</Text>
+        </Box>
       </Text>
     </Box>
   );

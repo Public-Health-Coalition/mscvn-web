@@ -15,7 +15,7 @@ export const ImageWrapper = styled.div`
   }
 `;
 
-export interface WelcomeProps { }
+export interface WelcomeProps {}
 
 const Welcome: React.FunctionComponent<WelcomeProps> = () => {
   return (
@@ -46,9 +46,17 @@ const Welcome: React.FunctionComponent<WelcomeProps> = () => {
             existing burden on the healthcare system, combine resources, support
             medical workers, and promote the exchange of ideas.
             <Box mb={40} />
-            We encourage you to engage with the opportunities on this map. Please note
-            that activities without contact information may be internal or no longer
-            seeking volunteers. Additionally, please exercise caution and view our <a href="https://publichealthcoalition.org/public-disclaimer/" target="_blank">statement on activity safety</a>.
+            We encourage you to engage with the opportunities on this map.
+            Please note that activities without contact information may be
+            internal or no longer seeking volunteers. Additionally, please
+            exercise caution and view our{' '}
+            <a
+              href="https://publichealthcoalition.org/public-disclaimer/"
+              target="_blank"
+            >
+              statement on activity safety
+            </a>
+            .
             <Box mb={40} />
             Let’s present a united front as future healthcare professionals and
             support the amazing work already being done to stem the tide of
