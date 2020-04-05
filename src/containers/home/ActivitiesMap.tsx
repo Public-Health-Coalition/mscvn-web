@@ -1,10 +1,11 @@
 import React, { FC, useState } from 'react';
 /* import SelectUsStates from 'react-select-us-states'; */
-import { /* Box, */ Flex, Grid, Heading } from '@primer/components';
+import { Flex, Heading } from '@primer/components';
 import StateModal from './StateModal';
 import UsaMap from '../../components/UsaMap';
 import { BannerWrapper } from './activitiesMap/style';
 import { DirectusSchool } from '../../../generated/types';
+import { Dropdown } from '@primer/components';
 
 export interface ActivityMapProps {
   schools: DirectusSchool[];
@@ -28,7 +29,7 @@ const ActivityMap: FC<ActivityMapProps> = (props: ActivityMapProps) => {
     (states: StatesData, school: DirectusSchool) => {
       if (!school.state || !school.activities_info?.length) return states;
       const stateData: StateData = {
-        schools: [...(states[school.state] || { schools: [] }).schools, school],
+        schools: [...(states[school.state] || { schools: [] }).schools, school]
       };
       states[school.state] = stateData;
       return states;
@@ -42,29 +43,39 @@ const ActivityMap: FC<ActivityMapProps> = (props: ActivityMapProps) => {
     setState(e.target.dataset.name || null);
   }
 
-  /* function handleSelectUsStatesChange(stateName: string) {
-   *   if (!stateName.length || !states[stateName]) return null;
-   *   setSchoolsByState(states[stateName].schools);
-   *   setState(stateName);
-   * } */
+  function handleSelectUsStatesChange(e: React.ChangeEvent<HTMLSelectElement>) {
+    const stateName = e.target.value;
+    if (!stateName.length || !states[stateName]) return null;
+    setSchoolsByState(states[stateName].schools);
+    setState(stateName);
+  }
+
+  function renderStateDropdownItems() {
+    return Object.keys(states).map((state: string) => <option>{state}</option>);
+  }
+
+  function renderStateDropdown() {
+    return (
+      <select
+        style={{ width: '120px', fontSize: '18px', textAlign: 'center' }}
+        onChange={handleSelectUsStatesChange}
+      >
+        {renderStateDropdownItems()}
+      </select>
+    );
+  }
 
   return (
     <BannerWrapper>
-      <Flex justifyContent="center">
-        <Grid>
-          <Heading fontSize={8} textAlign="center" mb={2} p={2}>
-            Medical Student COVID-19 Action Network (MSCAN)
-          </Heading>
-          <Heading fontSize={6} textAlign="center" p={2}>
-            Choose Your State
-          </Heading>
-          <UsaMap states={states} onClick={handleClick} />
-          {/* <Flex justifyContent="center">
-              <Box maxWidth={160} pt={5}>
-              <SelectUsStates onChange={handleSelectUsStatesChange} />
-              </Box>
-              </Flex> */}
-        </Grid>
+      <Flex justifyContent="center" flexDirection="column">
+        <Heading fontSize={8} textAlign="center" mb={2} p={2}>
+          Medical Student COVID-19 Action Network (MSCAN)
+        </Heading>
+        <Heading fontSize={6} textAlign="center" p={2} pb={6}>
+          Choose Your State
+        </Heading>
+        <Flex justifyContent="center">{renderStateDropdown()}</Flex>
+        <UsaMap states={states} onClick={handleClick} />
       </Flex>
       <StateModal
         isOpen={!!schoolsByState?.length && !!state}
