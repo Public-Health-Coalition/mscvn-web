@@ -27,7 +27,7 @@ const ActivityMap: FC<ActivityMapProps> = (props: ActivityMapProps) => {
     (states: StatesData, school: DirectusSchool) => {
       if (!school.state || !school.activities_info?.length) return states;
       const stateData: StateData = {
-        schools: [...(states[school.state] || { schools: [] }).schools, school],
+        schools: [...(states[school.state] || { schools: [] }).schools, school]
       };
       states[school.state] = stateData;
       return states;
@@ -74,7 +74,7 @@ const ActivityMap: FC<ActivityMapProps> = (props: ActivityMapProps) => {
           Choose Your State
         </Heading>
         <Text fontSize={1} textAlign="center" pb={6}>
-          additional US territories can be found the dropdown
+          additional US territories can be found in the dropdown
         </Text>
         <Flex justifyContent="center">{renderStateDropdown()}</Flex>
         <UsaMap states={states} onClick={handleClick} />
