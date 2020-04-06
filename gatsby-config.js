@@ -9,7 +9,8 @@ module.exports = {
     title: `Medical Student COVID-19 Action Network`,
     author: `Public Health Coalition`,
     about: `Medical Student COVID-19 Action Network`,
-    description: `This is a time of crisis for our world. As it stands, there have been over 1,000,000 cases of COVID-19, and that number is rising daily.`,
+    description:
+      'Join the fight against COVID-19! This interactive map shows medical school projects organized across the U.S. Our goal is to combine resources, promote the exchange of ideas, support healthcare workers, and inspire the nation.',
     siteUrl: `https://publichealthcoalition.org`,
   },
   plugins: [
