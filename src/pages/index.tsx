@@ -11,7 +11,7 @@ import twitterThumbnail from '../../content/assets/thumbnail_twitter.png';
 import {
   HomeQuery,
   DirectusSchool,
-  DirectusContributor
+  DirectusContributor,
 } from '../../generated/types';
 
 type SchoolEdge = HomeQuery['allDirectusSchool']['edges'][0];
