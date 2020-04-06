@@ -41,12 +41,16 @@ const StateModal: FC<StateModalProps> = (props: StateModalProps) => {
         <div
           dangerouslySetInnerHTML={{ __html: activityInfo?.details || '' }}
         />
-        <Heading fontSize={2} fontStyle="italic">
-          Contact Information:
-        </Heading>
-        <div
-          dangerouslySetInnerHTML={{ __html: activityInfo?.details || '' }}
-        />
+        {activityInfo?.contact?.length ? (
+          <>
+            <Heading fontSize={2} fontStyle="italic">
+              Contact Information:
+            </Heading>
+            <div
+              dangerouslySetInnerHTML={{ __html: activityInfo?.contact || '' }}
+            />
+          </>
+        ) : null}
         <hr />
       </Text>
     ));
