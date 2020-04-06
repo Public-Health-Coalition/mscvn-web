@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import { Flex, Heading } from '@primer/components';
+import { Flex, Heading, Text } from '@primer/components';
 import StateModal from './StateModal';
 import UsaMap from '../../components/UsaMap';
 import { BannerWrapper } from './activitiesMap/style';
@@ -27,7 +27,7 @@ const ActivityMap: FC<ActivityMapProps> = (props: ActivityMapProps) => {
     (states: StatesData, school: DirectusSchool) => {
       if (!school.state || !school.activities_info?.length) return states;
       const stateData: StateData = {
-        schools: [...(states[school.state] || { schools: [] }).schools, school],
+        schools: [...(states[school.state] || { schools: [] }).schools, school]
       };
       states[school.state] = stateData;
       return states;
@@ -58,6 +58,7 @@ const ActivityMap: FC<ActivityMapProps> = (props: ActivityMapProps) => {
         style={{ width: '120px', fontSize: '18px', textAlign: 'center' }}
         onChange={handleSelectUsStatesChange}
       >
+        <option>--</option>
         {renderStateDropdownItems()}
       </select>
     );
@@ -69,9 +70,12 @@ const ActivityMap: FC<ActivityMapProps> = (props: ActivityMapProps) => {
         <Heading fontSize={8} textAlign="center" mb={2} p={2}>
           Medical Student COVID-19 Action Network (MSCAN)
         </Heading>
-        <Heading fontSize={6} textAlign="center" p={2} pb={6}>
+        <Heading fontSize={6} textAlign="center" p={1}>
           Choose Your State
         </Heading>
+        <Text fontSize={1} textAlign="center" pb={6}>
+          additional US territories can be found the dropdown
+        </Text>
         <Flex justifyContent="center">{renderStateDropdown()}</Flex>
         <UsaMap states={states} onClick={handleClick} />
       </Flex>
