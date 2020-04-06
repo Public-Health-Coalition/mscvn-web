@@ -55,9 +55,21 @@ node_modules/.tmp/eslintReport.json: $(shell $(GIT) ls-files | grep -E "\.(j|t)s
 
 .PHONY: test
 test: node_modules/.tmp/eslintReport.json
-	@jest --coverage --coverageDirectory node_modules/.tmp/coverage
+	@react-scripts test --watchAll=false --json --outputFile=node_modules/.tmp/jestTestResults.json --coverage --coverageDirectory=node_modules/.tmp/coverage --testResultsProcessor=jest-sonar-reporter --collectCoverageFrom='["src/**/*.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}"]' $(ARGS)
 node_modules/.tmp/coverage/lcov.info: $(shell $(GIT) ls-files | grep -E "\.(j|t)sx?$$")
 	-@$(MAKE) -s test
+
+.PHONY: coverage
+coverage: node_modules/.tmp/eslintReport.json
+	@react-scripts test --watchAll=false --coverage --coverageDirectory=node_modules/.tmp/coverage --collectCoverageFrom='["src/**/*.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}"]' $(ARGS)
+
+.PHONY: test-watch
+test-watch: src/generated/apollo.tsx node_modules
+	@react-scripts test --collectCoverageFrom='["src/**/*.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}"]' $(ARGS)
+
+.PHONY: test-ui
+test-ui: src/generated/apollo.tsx node_modules
+	@majestic $(ARGS)
 
 .PHONY: clean
 clean:
