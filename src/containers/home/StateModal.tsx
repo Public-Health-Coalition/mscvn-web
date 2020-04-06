@@ -4,7 +4,7 @@ import { Grid, Flex, Heading, Dialog, Box, Text } from '@primer/components';
 import {
   DirectusSchool,
   Maybe,
-  DirectusActivityInfo,
+  DirectusActivityInfo
 } from '../../../generated/types';
 
 export interface StateModalProps {
@@ -35,12 +35,19 @@ const StateModal: FC<StateModalProps> = (props: StateModalProps) => {
   ) {
     return activitiesInfo?.map((activityInfo: Maybe<DirectusActivityInfo>) => (
       <Text mb={4} textAlign="left">
-        <Text fontStyle="italic" fontWeight="bold" fontSize={4}>
+        <Text fontWeight="bold" fontSize={5}>
           {activityInfo?.activity?.name}:{' '}
         </Text>
         <div
           dangerouslySetInnerHTML={{ __html: activityInfo?.details || '' }}
         />
+        <Heading fontSize={2} fontStyle="italic">
+          Contact Information:
+        </Heading>
+        <div
+          dangerouslySetInnerHTML={{ __html: activityInfo?.details || '' }}
+        />
+        <hr />
       </Text>
     ));
   }
@@ -84,7 +91,7 @@ StateModal.defaultProps = {
   isOpen: false,
   onDismiss: () => {},
   schoolsByState: [],
-  state: '',
+  state: ''
 };
 
 export default StateModal;

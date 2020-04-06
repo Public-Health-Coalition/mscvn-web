@@ -11,7 +11,7 @@ import twitterThumbnail from '../../content/assets/thumbnail_twitter.png';
 import {
   HomeQuery,
   DirectusSchool,
-  DirectusContributor,
+  DirectusContributor
 } from '../../generated/types';
 
 type SchoolEdge = HomeQuery['allDirectusSchool']['edges'][0];
@@ -53,10 +53,11 @@ export const pageQuery = graphql`
           name
           state
           activities_info {
-            details
-            status
-            id
+            contact
             created_on
+            details
+            id
+            status
             activity {
               name
               id
