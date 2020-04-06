@@ -30,7 +30,7 @@ const Home: FC<HomeProps> = (props: HomeProps) => {
   return (
     <Layout>
       <SEO
-        title="Home"
+        title="MSCAN"
         description={data.site?.siteMetadata?.description || ''}
         facebookThumbnail={facebookThumbnail}
         twitterThumbnail={twitterThumbnail}

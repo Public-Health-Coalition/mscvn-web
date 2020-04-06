@@ -71,7 +71,7 @@ const SEO: React.FunctionComponent<SEOProps> = ({
         },
         {
           name: `twitter:image`,
-          content: twitterThumbnail,
+          content: `https://publichealthcoalition.org${twitterThumbnail}`,
         },
         {
           name: `twitter:title`,
