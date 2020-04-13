@@ -132,7 +132,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-offline`,
+      resolve: `gatsby-plugin-remove-serviceworker`,
     },
     {
       resolve: `gatsby-plugin-react-helmet`,
