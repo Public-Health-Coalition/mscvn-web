@@ -5,9 +5,13 @@ import Contributor from './contributors/Contributor';
 import siliconHillsJpg from '../../images/siliconhills.jpg';
 import { DirectusContributor } from '../../../generated/types';
 
+
 type ContributorsProps = {
   contributors: DirectusContributor[];
 };
+
+
+
 
 const Contributors: React.FunctionComponent<ContributorsProps> = (
   props: ContributorsProps
@@ -25,6 +29,7 @@ const Contributors: React.FunctionComponent<ContributorsProps> = (
       </Flex>
     ));
   }
+
 
   return (
     <>
@@ -75,6 +80,7 @@ const Contributors: React.FunctionComponent<ContributorsProps> = (
                   </Text>
                   <Box mb={2} />
                 </Text>
+
               </Box>
             </Flex>
           </Link>
@@ -83,7 +89,9 @@ const Contributors: React.FunctionComponent<ContributorsProps> = (
           {renderContributors()}
         </Flex>
       </BlogContributorsWrapper>
+
     </>
+
   );
 };
 

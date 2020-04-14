@@ -13,6 +13,7 @@ import {
   DirectusSchool,
   DirectusContributor,
 } from '../../generated/types';
+import Schools from '../containers/home/Schools'
 
 type SchoolEdge = HomeQuery['allDirectusSchool']['edges'][0];
 
@@ -39,6 +40,7 @@ const Home: FC<HomeProps> = (props: HomeProps) => {
       <Welcome />
       <GetInvolved />
       <Contributors contributors={contributors} />
+      <Schools schools={schools} />
     </Layout>
   );
 };
