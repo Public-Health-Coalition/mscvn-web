@@ -5,9 +5,13 @@ import Contributor from './contributors/Contributor';
 import siliconHillsJpg from '../../images/siliconhills.jpg';
 import { DirectusContributor } from '../../../generated/types';
 
+
 type ContributorsProps = {
   contributors: DirectusContributor[];
 };
+
+
+
 
 const Contributors: React.FunctionComponent<ContributorsProps> = (
   props: ContributorsProps
@@ -25,6 +29,7 @@ const Contributors: React.FunctionComponent<ContributorsProps> = (
       </Flex>
     ));
   }
+
 
   return (
     <>
@@ -75,6 +80,7 @@ const Contributors: React.FunctionComponent<ContributorsProps> = (
                   </Text>
                   <Box mb={2} />
                 </Text>
+
               </Box>
             </Flex>
           </Link>
@@ -82,8 +88,31 @@ const Contributors: React.FunctionComponent<ContributorsProps> = (
         <Flex justifyContent="space-between" flexWrap="wrap">
           {renderContributors()}
         </Flex>
+        <Heading textAlign="center" mb={10}>
+          Additional Contributors
+        </Heading>
+        <Flex justifyContent="space-between" flexWrap="wrap">
+          <p> Aaron Gilani, Abigail Brenner, Abigail Godec, Adam Munday, Adedeji Adeniyi, Adiba Matin, Alex Woodbridge, Alyse Mary Elaine Ragauskas, Alyssa Chen, Angelina Omodt-Lopez,
+          Annie Yang, Anushka Sindkar, Archana Babu, Arielle Schecter, Arvind Haran, Ashley Ooms, Baillie Bronner, Brandon Barrett, Breanna Tracey, Brett Lewis, Brittany Cooke,
+          Bruin Pollard, Bryce Ringwald, Calvin Schaffer, Cara Dooley, Catie Havemann, Christina Dorismond, Christina Huang, Christopher Chermside-Scabbo, Christopher Wachuku,
+          Clare Batty, Clare Idehen, Cosette Kathawa, Cyrus Ghaznavi, David Elson, Director of Center for Civic Engagement, Dr. Amy Levi, Dr. Carol Terregino, Dr. Cindy Christian,
+          Dr. Daniel Mehan, Dr. David Asprey, Dr. Elizabeth C. Lawrence, Dr. Erik Constance, Dr. Felisha C. Rohan-Minjares, Dr. Janice Cato Varlack, Dr. Jon Morris,
+          Dr. Jonathan Espenschied, Dr. Lawrence Burgess, Dr. Lee Wei Wei, Dr. Leila Harrison, Dr. Martha McGrew, Dr. Mary Couig, Dr. Nathalie Feldman, Dr. Sandy Sanguino,
+          Dr. Sonia Laumbach, Eloho Akpovi, Emily Lopez Santa, Emily Northey, Erin Adams, Estefanía Montañez, Gabe Garena, Gabriel Noble Cruz, Gabriella Miller, Grace Wholley,
+          Halea Messe, Ikeanyi Chinonyelum, Jack Doenges, Jake Fox, Jericho Hallare, Jessica Kelly, Jessie Bangs, Jonah Moss, Katie McClung, Kavita Jain, Kime McClintock, Kylie Miller,
+          Lauran Evans, Lauren Burgoon, Lawren Wooten, Leah Colucci, Libby Wetterer, Lillian Boettcher, Lud Eyasu, Luke Wachsmuth, Lyba Zia, Maddie Ford
+          , Madeline Fritz, Maggie Gonzalez, Maggie Urschler, Mahtab Danai, Maria Khan, Mariana Olivencia, Martha Duah, Matthew Hey, Matthew Lovell, Matty Chavez, Megan Chiu, Meghan Lane,
+          Micaila Baroffio, Michael Broderick, Michael Lawler, Michael Martins, Moena Nishikawa, Mychael Delgardo, Nashali Ferrara, Natasha Mehta, Nicolas Rubel, Niv Badrinarayanan,
+          Noelle Lemons, Peter Alsharif, Purven Parikh, Rachel Davis, Rachel Rose, Rebekah Roll, Rose Paneno, Samantha Evans, Samantha White, Sanjay Chandrasekhar, Sara Lederman,
+          Scott Fabricant, Scott Gaignard, Sean Teebagy, Shaina Hasan, Simone Seward, Sneha Swaminathan, Sruthi Shankar, Steeve Pierre-Louis, Stephanie Gutierrez, Susan Brands,
+          Susan Caulfield, T. Alinea Esensoy, Tara Pilato, Tary Finefield, Tazim Merchant, Teju Peesay, Thao Le, Troy Amen, Vartan Pahalyants, Victor Anderson, Vijay Putatunda,
+          Wesley Ng, Yazmín Irazoqui-Ruiz, Zachary West,Ashley Brent</p>
+
+        </Flex>
       </BlogContributorsWrapper>
+
     </>
+
   );
 };
 
