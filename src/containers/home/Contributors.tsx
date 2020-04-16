@@ -92,8 +92,8 @@ const Contributors: React.FunctionComponent<ContributorsProps> = (
           Additional Contributors
         </Heading>
         <Flex justifyContent="space-between" flexWrap="wrap">
-          <p> Aaron Gilani, Abigail Brenner, Abigail Godec, Adam Munday, Adedeji Adeniyi, Adiba Matin, Alex Woodbridge, Alyse Mary Elaine Ragauskas, Alyssa Chen, Angelina Omodt-Lopez,
-          Annie Yang, Anushka Sindkar, Archana Babu, Arielle Schecter, Arvind Haran, Ashley Ooms, Baillie Bronner, Brandon Barrett, Breanna Tracey, Brett Lewis, Brittany Cooke,
+          <p>Aaron Gilani, Abigail Brenner, Abigail Godec, Adam Munday, Adedeji Adeniyi, Adiba Matin, Alex Woodbridge, Alyse Mary Elaine Ragauskas, Alyssa Chen, Angelina Omodt-Lopez,
+          Annie Yang, Anushka Sindkar, Archana Babu, Arielle Schecter, Arvind Haran, Ashley Brent, Ashley Ooms, Baillie Bronner, Brandon Barrett, Breanna Tracey, Brett Lewis, Brittany Cooke,
           Bruin Pollard, Bryce Ringwald, Calvin Schaffer, Cara Dooley, Catie Havemann, Christina Dorismond, Christina Huang, Christopher Chermside-Scabbo, Christopher Wachuku,
           Clare Batty, Clare Idehen, Cosette Kathawa, Cyrus Ghaznavi, David Elson, Director of Center for Civic Engagement, Dr. Amy Levi, Dr. Carol Terregino, Dr. Cindy Christian,
           Dr. Daniel Mehan, Dr. David Asprey, Dr. Elizabeth C. Lawrence, Dr. Erik Constance, Dr. Felisha C. Rohan-Minjares, Dr. Janice Cato Varlack, Dr. Jon Morris,
@@ -106,7 +106,7 @@ const Contributors: React.FunctionComponent<ContributorsProps> = (
           Noelle Lemons, Peter Alsharif, Purven Parikh, Rachel Davis, Rachel Rose, Rebekah Roll, Rose Paneno, Samantha Evans, Samantha White, Sanjay Chandrasekhar, Sara Lederman,
           Scott Fabricant, Scott Gaignard, Sean Teebagy, Shaina Hasan, Simone Seward, Sneha Swaminathan, Sruthi Shankar, Steeve Pierre-Louis, Stephanie Gutierrez, Susan Brands,
           Susan Caulfield, T. Alinea Esensoy, Tara Pilato, Tary Finefield, Tazim Merchant, Teju Peesay, Thao Le, Troy Amen, Vartan Pahalyants, Victor Anderson, Vijay Putatunda,
-          Wesley Ng, Yazmín Irazoqui-Ruiz, Zachary West,Ashley Brent</p>
+          Wesley Ng, Yazmín Irazoqui-Ruiz, Zachary West</p>
 
         </Flex>
       </BlogContributorsWrapper>
