@@ -54,6 +54,11 @@ const Newsletter: React.FunctionComponent<NewsletterProps> = ({ ...props }) => {
               office.mscan@gmail.com
             </a>
             .
+             <br /> <br />
+            <a target="_blank" href="https://twitter.com/mscanvolunteer">
+              Follow us on Twitter.
+            </a>
+            .
           </Text>
           {/* <NewsletterInputWrapper onSubmit={handleSubmit}>
             {success ? (
