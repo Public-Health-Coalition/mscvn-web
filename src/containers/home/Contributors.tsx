@@ -98,7 +98,7 @@ const Contributors: React.FunctionComponent<ContributorsProps> = (
             Ashley Brent, Ashley Cohen, Ashley Ooms, Baillie Bronner, Brandon Barrett, Breanna Tracey, Brett Lewis, Brian Elmore,
             Brittany Cooke, Bruin Pollard, Bryce Ringwald, Calvin Schaffer, Cara Dooley, Catie Havemann, Christina Dorismond,
             Christina Huang, Christopher Chermside-Scabbo, Christopher Wachuku, Clare Batty, Clare Idehen, Cosette Kathawa,
-            Courtney Smith, Cyrus Ghaznavi, David Elson, Director of Center for Civic Engagement, Dr. Amy Levi, Dr. Carol Terregino,
+            Courtney Smith, Cyrus Ghaznavi, David Elson, Dr. Amy Levi, Dr. Carol Terregino,
             Dr. Cindy Christian, Dr. Daniel Mehan, Dr. David Asprey, Dr. Elizabeth C. Lawrence, Dr. Erik Constance,
             Dr. Felisha C. Rohan-Minjares, Dr. Janice Cato Varlack, Dr. Jon Morris, Dr. Jonathan Espenschied, Dr. Lawrence Burgess,
             Dr. Lee Wei Wei, Dr. Leila Harrison, Dr. Martha McGrew, Dr. Mary Couig, Dr. Nathalie Feldman, Dr. Sandy Sanguino,
