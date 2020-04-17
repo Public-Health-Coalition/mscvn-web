@@ -58,7 +58,6 @@ const Newsletter: React.FunctionComponent<NewsletterProps> = ({ ...props }) => {
             <a target="_blank" href="https://twitter.com/mscanvolunteer">
               Follow us on Twitter.
             </a>
-            .
           </Text>
           {/* <NewsletterInputWrapper onSubmit={handleSubmit}>
             {success ? (
