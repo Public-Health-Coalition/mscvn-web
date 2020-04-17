@@ -92,8 +92,8 @@ const Contributors: React.FunctionComponent<ContributorsProps> = (
           Additional Contributors
         </Heading>
         <Flex justifyContent="space-between" flexWrap="wrap">
-          <p>Aaron Gilani, Abhinaya Ganesh, Abigail Brenner, Abigail Godec, Adam Munday, Adedeji Adeniyi, Adiba Matin, Alex Clos,
-            Alex Woodbridge, Alfonso Gomez, Alieu Kanu, Allison Martin, Alyse Mary Elaine Ragauskas, Alyssa Chen, Alyssa Kessel,
+          <p>Aaron Gilani, Abhinaya Ganesh, Abigail Brenner, Abigail Godec, Adaah Sayyed, Adam Munday, Adedeji Adeniyi, Adiba Matin,
+            Alex Clos, Alex Woodbridge, Alfonso Gomez, Alieu Kanu, Allison Martin, Alyse Mary Elaine Ragauskas, Alyssa Chen, Alyssa Kessel,
             Andrew Chapman, Angelina Omodt-Lopez, Annie Yang, Anushka Sindkar, Archana Babu, Arielle Schecter, Arvind Haran,
             Ashley Brent, Ashley Cohen, Ashley Ooms, Baillie Bronner, Brandon Barrett, Breanna Tracey, Brett Lewis, Brian Elmore,
             Brittany Cooke, Bruin Pollard, Bryce Ringwald, Calvin Schaffer, Cara Dooley, Catie Havemann, Christina Dorismond,
