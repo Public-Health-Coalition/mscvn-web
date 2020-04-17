@@ -40,7 +40,6 @@ const Home: FC<HomeProps> = (props: HomeProps) => {
       <Welcome />
       <GetInvolved />
       <Contributors contributors={contributors} />
-      <!--- <Schools schools={schools} /> --->
     </Layout>
   );
 };
