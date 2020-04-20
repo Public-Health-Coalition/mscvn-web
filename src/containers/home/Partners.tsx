@@ -1,22 +1,22 @@
 import * as React from 'react';
 import { Heading, Flex, Box, Link, Text } from '@primer/components';
 import BlogContributorsWrapper from './contributors/style';
-import { DirectusSchool } from '../../../generated/types';
-import School from './contributors/School';
+import { DirectusPartner } from '../../../generated/types';
+import Partner from './contributors/Partner';
 
-type SchoolsProps = {
-    schools: DirectusSchool[];
+type PartnersProps = {
+    Partners: DirectusPartner[];
 };
 
-const Schools: React.FunctionComponent<SchoolsProps> = (
-    props: SchoolsProps
+const Partners: React.FunctionComponent<PartnersProps> = (
+    props: PartnersProps
 ) => {
-    function renderSchools() {
-        return props.schools.map((school: DirectusSchool) => (
+    function renderPartners() {
+        return props.Partners.map((partner: DirectusPartner) => (
             <Flex flex="1 1 20%" justifyContent="center">
-                <School
-                    name={school?.name!}
-                    state={school?.state!}
+                <Partner
+                    name={partner?.name!}
+
 
                 />
             </Flex>
@@ -25,15 +25,15 @@ const Schools: React.FunctionComponent<SchoolsProps> = (
 
     return (
         <>
-            <Box id="schools" />
+            <Box id="Partners" />
             <BlogContributorsWrapper>
                 <Heading textAlign="center" mb={10}>
-                    Contributing Medical Schools
+                    Our Partners
         </Heading>
 
 
                 <Flex justifyContent="space-between" flexWrap="wrap">
-                    {renderSchools()}
+                    {renderPartners()}
                 </Flex>
             </BlogContributorsWrapper>
 
@@ -42,4 +42,4 @@ const Schools: React.FunctionComponent<SchoolsProps> = (
     );
 };
 
-export default Schools;
+export default Partners;

@@ -12,8 +12,9 @@ import {
   HomeQuery,
   DirectusSchool,
   DirectusContributor,
+  DirectusPartner
 } from '../../generated/types';
-import Schools from '../containers/home/Schools'
+import Partners from '../containers/home/Partners';
 
 type SchoolEdge = HomeQuery['allDirectusSchool']['edges'][0];
 
@@ -26,6 +27,10 @@ const Home: FC<HomeProps> = (props: HomeProps) => {
   const schools = data.allDirectusSchool.edges.map(
     (schoolEdge: SchoolEdge) => schoolEdge.node
   ) as DirectusSchool[];
+
+
+  const partners = data.allDirectusPartner
+    .nodes as DirectusPartner[];
   const contributors = data.allDirectusContributor
     .nodes as DirectusContributor[];
   return (
@@ -39,6 +44,7 @@ const Home: FC<HomeProps> = (props: HomeProps) => {
       <ActivitiesMap schools={schools} />
       <Welcome />
       <GetInvolved />
+      <Partners partners={partners} />
       <Contributors contributors={contributors} />
     </Layout>
   );

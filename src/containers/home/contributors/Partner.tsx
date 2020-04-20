@@ -1,13 +1,14 @@
 import React, { FC } from 'react';
 import { Box, Flex, Heading, Text, Link } from '@primer/components';
 
-export interface SchoolProps {
+export interface PartnerProps {
     name?: string;
     state?: string;
 
 }
 
-const School: FC<SchoolProps> = (props: SchoolProps) => {
+const Partner: FC<PartnerProps> = (props: PartnerProps
+) => {
     function renderPhoto() {
         if (!props.photo) return null;
         return (
@@ -28,18 +29,16 @@ const School: FC<SchoolProps> = (props: SchoolProps) => {
             <Heading textAlign="center" fontSize={5} mb={2}>
                 {props.name}
             </Heading>
-            <Heading textAlign="center" fontSize={2} mb={2}>
-                {props.state}
-            </Heading>
+
 
         </Box>
     );
 };
 
-School.defaultProps = {
+Partner.defaultProps = {
     name: '',
     state: '',
 
 };
 
-export default School;
+export default Partner;
