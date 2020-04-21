@@ -31,10 +31,18 @@ const Partner: FC<PartnerProps> = (props: PartnerProps
             {renderPhoto()}
             <Heading textAlign="center" fontSize={5} mb={2}>
                 {props.name}
-
             </Heading>
-
-
+            <Text textAlign="center">
+                <Link href={props.homepage} target="_blank" mb={2}>
+                    <Heading fontSize={1} textAlign="center">
+                        {props.homepage}
+                    </Heading>
+                </Link>
+                <Box mb={2} />
+                <Box textAlign="center">
+                    <Text fontSize={2}>{props.description}</Text>
+                </Box>
+            </Text>
         </Box>
     );
 };
@@ -42,7 +50,8 @@ const Partner: FC<PartnerProps> = (props: PartnerProps
 Partner.defaultProps = {
     name: '',
     photo: '',
-    homepage: ''
+    homepage: '',
+    description: '',
 
 };
 
