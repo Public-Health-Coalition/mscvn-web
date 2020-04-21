@@ -22,8 +22,10 @@ export interface HomeProps {
   data: HomeQuery;
 }
 
+
 const Home: FC<HomeProps> = (props: HomeProps) => {
   const { data } = props;
+
   const schools = data.allDirectusSchool.edges.map(
     (schoolEdge: SchoolEdge) => schoolEdge.node
   ) as DirectusSchool[];
@@ -31,6 +33,7 @@ const Home: FC<HomeProps> = (props: HomeProps) => {
 
   const partners = data.allDirectusPartner
     .nodes as DirectusPartner[];
+
   const contributors = data.allDirectusContributor
     .nodes as DirectusContributor[];
   return (
@@ -87,6 +90,14 @@ export const pageQuery = graphql`
         photo
         title
         status
+      }
+    }
+    allDirectusPartner {
+      nodes {
+        description
+        homepage
+        name
+        photo
       }
     }
     site {

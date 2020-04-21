@@ -5,17 +5,20 @@ import { DirectusPartner } from '../../../generated/types';
 import Partner from './contributors/Partner';
 
 type PartnersProps = {
-    Partners: DirectusPartner[];
+    partners: DirectusPartner[];
 };
 
 const Partners: React.FunctionComponent<PartnersProps> = (
     props: PartnersProps
 ) => {
     function renderPartners() {
-        return props.Partners.map((partner: DirectusPartner) => (
+        return props.partners.map((partner: DirectusPartner) => (
             <Flex flex="1 1 20%" justifyContent="center">
                 <Partner
                     name={partner?.name!}
+                    photo={partner?.photo!}
+                    description={partner?.description!}
+
 
 
                 />

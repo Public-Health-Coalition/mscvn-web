@@ -3,7 +3,10 @@ import { Box, Flex, Heading, Text, Link } from '@primer/components';
 
 export interface PartnerProps {
     name?: string;
-    state?: string;
+    photo?: string;
+    homepage?: string;
+    description?: string;
+
 
 }
 
@@ -28,6 +31,7 @@ const Partner: FC<PartnerProps> = (props: PartnerProps
             {renderPhoto()}
             <Heading textAlign="center" fontSize={5} mb={2}>
                 {props.name}
+
             </Heading>
 
 
@@ -37,7 +41,8 @@ const Partner: FC<PartnerProps> = (props: PartnerProps
 
 Partner.defaultProps = {
     name: '',
-    state: '',
+    photo: '',
+    homepage: ''
 
 };
 
