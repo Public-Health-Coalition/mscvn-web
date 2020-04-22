@@ -36,7 +36,7 @@ const Contributors: React.FunctionComponent<ContributorsProps> = (
       <Box id="contributors" />
       <BlogContributorsWrapper>
         <Heading textAlign="center" mb={10}>
-          Contributors
+          Our Team
         </Heading>
         <Flex justifyContent="center">
           <Link
