@@ -27,7 +27,7 @@ const ActivityMap: FC<ActivityMapProps> = (props: ActivityMapProps) => {
     (states: StatesData, school: DirectusSchool) => {
       if (!school.state || !school.activities_info?.length) return states;
       const stateData: StateData = {
-        schools: [...(states[school.state] || { schools: [] }).schools, school],
+        schools: [...(states[school.state] || { schools: [] }).schools, school]
       };
       states[school.state] = stateData;
       return states;

@@ -8,7 +8,7 @@ import {
   PostDetails,
   PostTitle,
   PostMeta,
-  PostTags,
+  PostTags
 } from './featurePost.style';
 
 interface FeaturedPostProps {
@@ -83,7 +83,7 @@ const FeaturedPost: React.FunctionComponent<FeaturedPostProps> = ({
 };
 
 FeaturedPost.defaultProps = {
-  imageType: 'fluid',
+  imageType: 'fluid'
 };
 
 export default FeaturedPost;

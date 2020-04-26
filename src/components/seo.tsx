@@ -19,7 +19,7 @@ const SEO: React.FunctionComponent<SEOProps> = ({
   keywords,
   facebookThumbnail,
   twitterThumbnail,
-  title,
+  title
 }) => {
   const { site } = useStaticQuery(
     graphql`
@@ -40,53 +40,53 @@ const SEO: React.FunctionComponent<SEOProps> = ({
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content: metaDescription
         },
         {
           property: `og:title`,
-          content: title,
+          content: title
         },
         {
           property: `og:image`,
-          content: facebookThumbnail,
+          content: facebookThumbnail
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: metaDescription
         },
         {
           property: `og:type`,
-          content: `website`,
+          content: `website`
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary`
         },
         {
           name: `twitter:image`,
-          content: `https://publichealthcoalition.org${twitterThumbnail}`,
+          content: `https://publichealthcoalition.org${twitterThumbnail}`
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: title
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
-        },
+          content: metaDescription
+        }
       ]
         .concat(
           keywords.length > 0
             ? {
                 name: `keywords`,
-                content: keywords.join(`, `),
+                content: keywords.join(`, `)
               }
             : []
         )
@@ -99,7 +99,7 @@ SEO.defaultProps = {
   lang: `en`,
   meta: [],
   keywords: [],
-  description: ``,
+  description: ``
 };
 
 export default SEO;

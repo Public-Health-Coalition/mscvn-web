@@ -11,7 +11,7 @@ import {
   HomeQuery,
   DirectusSchool,
   DirectusContributor,
-  DirectusPartner,
+  DirectusPartner
 } from '../../generated/types';
 import Partners from '../containers/home/Partners';
 

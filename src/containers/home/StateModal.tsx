@@ -4,7 +4,7 @@ import { Grid, Flex, Heading, Dialog, Box, Text } from '@primer/components';
 import {
   DirectusSchool,
   Maybe,
-  DirectusActivityInfo,
+  DirectusActivityInfo
 } from '../../../generated/types';
 
 export interface StateModalProps {
@@ -95,7 +95,7 @@ StateModal.defaultProps = {
   isOpen: false,
   onDismiss: () => {},
   schoolsByState: [],
-  state: '',
+  state: ''
 };
 
 export default StateModal;

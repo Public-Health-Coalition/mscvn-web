@@ -10,7 +10,7 @@ const colors = {
   borderColor: '#00bbf7', // 8
   lightBorderColor: '#ededed', //9
   primary: '#ffbb00', // 10
-  primaryHover: '#ffbb00', // 11
+  primaryHover: '#ffbb00' // 11
 };
 
 export default colors;

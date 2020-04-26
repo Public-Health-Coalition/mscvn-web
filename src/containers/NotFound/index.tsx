@@ -7,7 +7,7 @@ import {
   NotFoundContent,
   NotFoundImage,
   Goback,
-  Icon,
+  Icon
 } from './style';
 import notFoundSvg from '../../../content/assets/not_found.svg';
 

@@ -11,7 +11,7 @@ import {
   NewsletterDescription,
   NewsletterInputWrapper,
   ErrorMessage,
-  SuccessMessage,
+  SuccessMessage
 } from './getInvolved/style';
 
 type NewsletterProps = {};

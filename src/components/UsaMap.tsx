@@ -26,7 +26,7 @@ const UsaMap: FC<UsaMapProps> = (props: UsaMapProps) => {
     return Object.entries(props.states || {}).reduce(
       (customize: StatesCustomize, [stateName, stateData]: [string, any]) => {
         customize[stateName] = {
-          fill: colorHash.hex(JSON.stringify(stateData)),
+          fill: colorHash.hex(JSON.stringify(stateData))
         };
         return customize;
       },
@@ -98,7 +98,7 @@ const UsaMap: FC<UsaMapProps> = (props: UsaMapProps) => {
 
 UsaMap.defaultProps = {
   onClick: () => {},
-  states: {},
+  states: {}
 };
 
 export default UsaMap;

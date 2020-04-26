@@ -9,7 +9,7 @@ import {
   NewsletterDescription,
   NewsletterInputWrapper,
   ErrorMessage,
-  SuccessMessage,
+  SuccessMessage
 } from './Newsletter.style';
 
 type NewsletterProps = {};

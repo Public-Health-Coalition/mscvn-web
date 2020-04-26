@@ -48,7 +48,7 @@ Partner.defaultProps = {
   name: '',
   photo: '',
   homepage: '',
-  description: '',
+  description: ''
 };
 
 export default Partner;

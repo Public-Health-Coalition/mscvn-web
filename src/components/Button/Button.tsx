@@ -117,7 +117,7 @@ const Button: React.FC<ButtonProps> = ({
 Button.defaultProps = {
   disabled: false,
   isLoading: false,
-  type: 'button',
+  type: 'button'
 };
 
 export default Button;
