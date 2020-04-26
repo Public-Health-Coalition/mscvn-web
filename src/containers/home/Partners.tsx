@@ -5,44 +5,38 @@ import { DirectusPartner } from '../../../generated/types';
 import Partner from './contributors/Partner';
 
 type PartnersProps = {
-    partners: DirectusPartner[];
+  partners: DirectusPartner[];
 };
 
 const Partners: React.FunctionComponent<PartnersProps> = (
-    props: PartnersProps
+  props: PartnersProps
 ) => {
-    function renderPartners() {
-        return props.partners.map((partner: DirectusPartner) => (
-            <Flex flex="1 1 20%" justifyContent="center">
-                <Partner
-                    name={partner?.name!}
-                    photo={partner?.photo!}
-                    description={partner?.description!}
+  function renderPartners() {
+    return props.partners.map((partner: DirectusPartner) => (
+      <Flex flex="1 1 20%" justifyContent="center">
+        <Partner
+          name={partner?.name!}
+          photo={partner?.photo!}
+          description={partner?.description!}
+        />
+      </Flex>
+    ));
+  }
 
-
-
-                />
-            </Flex>
-        ));
-    }
-
-    return (
-        <>
-            <Box id="Partners" />
-            <BlogContributorsWrapper>
-                <Heading textAlign="center" mb={10}>
-                    Our Partners
+  return (
+    <>
+      <Box id="Partners" />
+      <BlogContributorsWrapper>
+        <Heading textAlign="center" mb={10}>
+          Our Partners
         </Heading>
 
-
-                <Flex justifyContent="space-between" flexWrap="wrap">
-                    {renderPartners()}
-                </Flex>
-            </BlogContributorsWrapper>
-
-        </>
-
-    );
+        <Flex justifyContent="space-between" flexWrap="wrap">
+          {renderPartners()}
+        </Flex>
+      </BlogContributorsWrapper>
+    </>
+  );
 };
 
 export default Partners;

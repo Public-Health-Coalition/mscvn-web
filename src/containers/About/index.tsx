@@ -6,37 +6,37 @@ import {
   IoLogoFacebook,
   IoLogoTwitter,
   IoLogoInstagram,
-  IoLogoLinkedin,
+  IoLogoLinkedin
 } from 'react-icons/io';
 import {
   AboutWrapper,
   AboutImage,
   AboutPageTitle,
   AboutDetails,
-  SocialProfiles,
+  SocialProfiles
 } from './style';
 
 const SocialLinks = [
   {
     icon: <IoLogoFacebook />,
     url: 'https://www.facebook.com/redqinc/',
-    tooltip: 'Facebook',
+    tooltip: 'Facebook'
   },
   {
     icon: <IoLogoInstagram />,
     url: 'https://www.instagram.com/redqinc/',
-    tooltip: 'Instagram',
+    tooltip: 'Instagram'
   },
   {
     icon: <IoLogoTwitter />,
     url: 'https://twitter.com/redqinc',
-    tooltip: 'Twitter',
+    tooltip: 'Twitter'
   },
   {
     icon: <IoLogoLinkedin />,
     url: 'https://www.linkedin.com/company/redqinc/',
-    tooltip: 'Linked In',
-  },
+    tooltip: 'Linked In'
+  }
 ];
 
 interface AboutProps {}
@@ -47,7 +47,18 @@ const About: React.FunctionComponent<AboutProps> = (props) => {
       avatar: file(absolutePath: { regex: "/about.jpg/" }) {
         childImageSharp {
           fluid(maxWidth: 1770, quality: 90) {
-            ...GatsbyImageSharpFluid
+            tracedSVG
+            srcWebp
+            srcSetWebp
+            srcSet
+            src
+            sizes
+            presentationWidth
+            presentationHeight
+            originalName
+            originalImg
+            base64
+            aspectRatio
           }
         }
       }

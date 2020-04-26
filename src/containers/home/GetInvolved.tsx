@@ -48,23 +48,29 @@ const Newsletter: React.FunctionComponent<NewsletterProps> = ({ ...props }) => {
         <NewsletterInnerWrapper>
           <NewsletterTitle>Get Involved</NewsletterTitle>
 
-          <Text fontSize={9}>     
-             <a target="_blank" href="https://www.facebook.com/MSCANVolunteer/">
+          <Text fontSize={9}>
+            <a target="_blank" href="https://www.facebook.com/MSCANVolunteer/">
               <FaFacebook />
-            </a>&nbsp;
+            </a>
+            &nbsp;
             <a target="_blank" href="https://twitter.com/mscanvolunteer">
               <FaTwitter />
-            </a>&nbsp;
-            <a target="_blank" href="https://www.youtube.com/channel/UCZcBF-uqP37PKMNN42BrA6A">
+            </a>
+            &nbsp;
+            <a
+              target="_blank"
+              href="https://www.youtube.com/channel/UCZcBF-uqP37PKMNN42BrA6A"
+            >
               <FaYoutube />
-            </a>&nbsp;
+            </a>
+            &nbsp;
             <a target="_blank" href="https://www.instagram.com/mscanvolunteer">
               <FaInstagram />
             </a>
             <br /> <br />
           </Text>
           <Text fontSize={6}>
-          Interested in participating on our team or sending information for
+            Interested in participating on our team or sending information for
             our map? <br /> <br /> Please email{' '}
             <a target="_blank" href="mailto:office.mscan@gmail.com">
               office.mscan@gmail.com

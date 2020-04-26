@@ -28,7 +28,18 @@ const Banner: React.FunctionComponent<BannerProps> = () => {
               cover {
                 childImageSharp {
                   fluid(maxWidth: 90, maxHeight: 90, quality: 100) {
-                    ...GatsbyImageSharpFluid_noBase64
+                    tracedSVG
+                    srcWebp
+                    srcSetWebp
+                    srcSet
+                    src
+                    sizes
+                    presentationWidth
+                    presentationHeight
+                    originalName
+                    originalImg
+                    base64
+                    aspectRatio
                   }
                 }
               }
@@ -59,7 +70,7 @@ const Banner: React.FunctionComponent<BannerProps> = () => {
               '#e17055',
               '#0984e3',
               '#badc58',
-              '#c7ecee',
+              '#c7ecee'
             ];
             const setColor =
               placeholderColors[

@@ -12,13 +12,13 @@ import {
   FacebookShareButton,
   TwitterShareButton,
   PinterestShareButton,
-  RedditShareButton,
+  RedditShareButton
 } from 'react-share';
 import {
   IoLogoFacebook,
   IoLogoTwitter,
   IoLogoPinterest,
-  IoLogoReddit,
+  IoLogoReddit
 } from 'react-icons/io';
 import {
   BlogPostDetailsWrapper,
@@ -30,7 +30,7 @@ import {
   PostShare,
   PostTags,
   BlogPostComment,
-  BlogDetailsContent,
+  BlogDetailsContent
 } from './templates.style';
 
 const BlogPostTemplate = (props: any) => {
@@ -43,7 +43,7 @@ const BlogPostTemplate = (props: any) => {
 
   const disqusConfig = {
     shortname: process.env.DISQUS_NAME,
-    config: { identifier: slug, title },
+    config: { identifier: slug, title }
   };
 
   return (
@@ -121,7 +121,7 @@ const BlogPostTemplate = (props: any) => {
                 '#e17055',
                 '#0984e3',
                 '#badc58',
-                '#c7ecee',
+                '#c7ecee'
               ];
               const setColor =
                 placeholderColors[
@@ -175,7 +175,18 @@ export const pageQuery = graphql`
           publicURL
           childImageSharp {
             fluid(maxWidth: 1170, quality: 100) {
-              ...GatsbyImageSharpFluid_noBase64
+              tracedSVG
+              srcWebp
+              srcSetWebp
+              srcSet
+              src
+              sizes
+              presentationWidth
+              presentationHeight
+              originalName
+              originalImg
+              base64
+              aspectRatio
             }
           }
         }
@@ -201,7 +212,18 @@ export const pageQuery = graphql`
               publicURL
               childImageSharp {
                 fluid(maxWidth: 370, maxHeight: 220, quality: 90) {
-                  ...GatsbyImageSharpFluid_noBase64
+                  tracedSVG
+                  srcWebp
+                  srcSetWebp
+                  srcSet
+                  src
+                  sizes
+                  presentationWidth
+                  presentationHeight
+                  originalName
+                  originalImg
+                  base64
+                  aspectRatio
                 }
               }
             }

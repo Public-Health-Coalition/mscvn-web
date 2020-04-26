@@ -5,11 +5,35 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   const blogPost = path.resolve(`./src/templates/blog-post.tsx`);
+  const schoolPage = path.resolve(`./src/templates/school-page.tsx`);
   const blogList = path.resolve(`./src/templates/blog-list.tsx`);
   const tagTemplate = path.resolve(`./src/templates/tags.tsx`);
   return graphql(
     `
       {
+        allDirectusSchool {
+          edges {
+            node {
+              name
+              state
+              activities_info {
+                contact
+                created_on
+                details
+                id
+                status
+                activity {
+                  name
+                  id
+                  created_on
+                }
+              }
+              status
+              id
+              created_on
+            }
+          }
+        }
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
@@ -35,6 +59,20 @@ exports.createPages = ({ graphql, actions }) => {
 
     // Create blog posts pages.
     const posts = result.data.allMarkdownRemark.edges;
+    const schools = result.data.allDirectusSchool.edges.map(
+      (schoolEdge) => schoolEdge.node
+    );
+
+    schools.forEach((school, index) => {
+      createPage({
+        path: school.id,
+        component: schoolPage,
+        context: {
+          slug: school.id,
+          tag: ['school', school.state.toLowerCase()]
+        }
+      });
+    });
 
     posts.forEach((post, index) => {
       const previous =
@@ -48,8 +86,8 @@ exports.createPages = ({ graphql, actions }) => {
           slug: post.node.fields.slug,
           previous,
           next,
-          tag: post.node.frontmatter.tags,
-        },
+          tag: post.node.frontmatter.tags
+        }
       });
     });
 
@@ -65,8 +103,8 @@ exports.createPages = ({ graphql, actions }) => {
           limit: postsPerPage,
           skip: i * postsPerPage,
           numPages,
-          currentPage: i + 1,
-        },
+          currentPage: i + 1
+        }
       });
     });
 
@@ -87,8 +125,8 @@ exports.createPages = ({ graphql, actions }) => {
         path: `/tags/${_.kebabCase(tag)}/`,
         component: tagTemplate,
         context: {
-          tag,
-        },
+          tag
+        }
       });
     });
 
@@ -98,21 +136,20 @@ exports.createPages = ({ graphql, actions }) => {
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
-
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode });
     if (typeof node.frontmatter.slug !== 'undefined') {
       createNodeField({
         node,
         name: 'slug',
-        value: node.frontmatter.slug,
+        value: node.frontmatter.slug
       });
     } else {
       const value = createFilePath({ node, getNode });
       createNodeField({
         node,
         name: 'slug',
-        value,
+        value
       });
     }
   }
@@ -124,7 +161,7 @@ exports.onCreateWebpackConfig = ({ getConfig, stage }) => {
   if (stage.startsWith('develop') && config.resolve) {
     config.resolve.alias = {
       ...config.resolve.alias,
-      'react-dom': '@hot-loader/react-dom',
+      'react-dom': '@hot-loader/react-dom'
     };
   }
 };

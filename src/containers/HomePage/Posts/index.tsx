@@ -28,7 +28,18 @@ const Posts: React.FunctionComponent<PostsProps> = () => {
               cover {
                 childImageSharp {
                   fluid(maxWidth: 570, maxHeight: 370, quality: 100) {
-                    ...GatsbyImageSharpFluid_noBase64
+                    tracedSVG
+                    srcWebp
+                    srcSetWebp
+                    srcSet
+                    src
+                    sizes
+                    presentationWidth
+                    presentationHeight
+                    originalName
+                    originalImg
+                    base64
+                    aspectRatio
                   }
                 }
               }
@@ -57,7 +68,7 @@ const Posts: React.FunctionComponent<PostsProps> = () => {
             '#e17055',
             '#0984e3',
             '#badc58',
-            '#c7ecee',
+            '#c7ecee'
           ];
           const setColor =
             placeholderColors[

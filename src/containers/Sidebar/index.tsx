@@ -10,7 +10,7 @@ import {
   WidgetTitle,
   TagItem,
   InstagramWrapper,
-  InstagramPhoto,
+  InstagramPhoto
 } from './style';
 
 type SidebarProps = {};
@@ -36,7 +36,18 @@ const Sidebar: React.FunctionComponent<SidebarProps> = () => {
               cover {
                 childImageSharp {
                   fluid(maxWidth: 90, maxHeight: 90, quality: 100) {
-                    ...GatsbyImageSharpFluid_noBase64
+                    tracedSVG
+                    srcWebp
+                    srcSetWebp
+                    srcSet
+                    src
+                    sizes
+                    presentationWidth
+                    presentationHeight
+                    originalName
+                    originalImg
+                    base64
+                    aspectRatio
                   }
                 }
               }
@@ -83,7 +94,7 @@ const Sidebar: React.FunctionComponent<SidebarProps> = () => {
             '#e17055',
             '#0984e3',
             '#badc58',
-            '#c7ecee',
+            '#c7ecee'
           ];
           const setColor =
             placeholderColors[
@@ -135,7 +146,7 @@ const Sidebar: React.FunctionComponent<SidebarProps> = () => {
                 '#e17055',
                 '#0984e3',
                 '#badc58',
-                '#c7ecee',
+                '#c7ecee'
               ];
               const setColor =
                 placeholderColors[

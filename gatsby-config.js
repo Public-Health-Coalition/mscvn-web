@@ -1,6 +1,6 @@
 const path = require('path');
 require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
+  path: `.env.${process.env.NODE_ENV}`
 });
 require('@babel/polyfill');
 
@@ -11,11 +11,11 @@ module.exports = {
     about: `Medical Student COVID-19 Action Network`,
     description:
       'Join the fight against COVID-19! This interactive map shows medical school projects organized across the U.S. Our goal is to combine resources, promote the exchange of ideas, support healthcare workers, and inspire the nation.',
-    siteUrl: `https://publichealthcoalition.org`,
+    siteUrl: `https://publichealthcoalition.org`
   },
   plugins: [
     {
-      resolve: 'gatsby-plugin-mdx',
+      resolve: 'gatsby-plugin-mdx'
     },
     {
       resolve: '@directus/gatsby-source-directus',
@@ -24,42 +24,42 @@ module.exports = {
         project: '_',
         auth: {
           email: process.env.DIRECTUS_EMAIL || '',
-          password: process.env.DIRECTUS_PASSWORD || '',
+          password: process.env.DIRECTUS_PASSWORD || ''
         },
-        targetStatuses: ['published', '__NONE__'],
-      },
+        targetStatuses: ['published', '__NONE__']
+      }
     },
     {
       resolve: `gatsby-plugin-graphql-codegen`,
       options: {
         fileName: `generated/types.ts`,
-        documentPaths: ['./src/pages/*.{ts,tsx}'],
+        documentPaths: ['./src/pages/*.{ts,tsx}', './src/templates/*.{ts,tsx}'],
         codegenDelay: 200,
         pluckConfig: {
           globalGqlIdentifierName: 'graphql',
-          modules: [{ name: 'gatsby', identifier: 'graphql' }],
-        },
-      },
+          modules: [{ name: 'gatsby', identifier: 'graphql' }]
+        }
+      }
     },
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
-        minify: false, // Breaks styles if not set to false
-      },
+        minify: false // Breaks styles if not set to false
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
-        name: `blog`,
-      },
+        name: `blog`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/assets`,
-        name: `assets`,
-      },
+        name: `assets`
+      }
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -69,55 +69,55 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
-              linkImagesToOriginal: true,
-            },
+              linkImagesToOriginal: true
+            }
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
+              wrapperStyle: `margin-bottom: 1.0725rem`
+            }
           },
           {
             resolve: `gatsby-remark-katex`,
             options: {
               // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
-              strict: `ignore`,
-            },
+              strict: `ignore`
+            }
           },
           {
-            resolve: `gatsby-remark-mermaid`,
+            resolve: `gatsby-remark-mermaid`
           },
           {
-            resolve: `gatsby-remark-prismjs`,
+            resolve: `gatsby-remark-prismjs`
           },
           {
-            resolve: `gatsby-remark-prismjs`,
+            resolve: `gatsby-remark-prismjs`
           },
 
           {
-            resolve: `gatsby-remark-copy-linked-files`,
+            resolve: `gatsby-remark-copy-linked-files`
           },
           {
-            resolve: `gatsby-remark-smartypants`,
-          },
-        ],
-      },
+            resolve: `gatsby-remark-smartypants`
+          }
+        ]
+      }
     },
     {
-      resolve: `gatsby-transformer-sharp`,
+      resolve: `gatsby-transformer-sharp`
     },
     {
-      resolve: `gatsby-plugin-sharp`,
+      resolve: `gatsby-plugin-sharp`
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'UA-161712632-1',
-      },
+        trackingId: 'UA-161712632-1'
+      }
     },
     {
-      resolve: `gatsby-plugin-feed`,
+      resolve: `gatsby-plugin-feed`
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -128,20 +128,20 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/favicon.png`,
-      },
+        icon: `content/assets/favicon.png`
+      }
     },
     {
-      resolve: `gatsby-plugin-remove-serviceworker`,
+      resolve: `gatsby-plugin-remove-serviceworker`
     },
     {
-      resolve: `gatsby-plugin-react-helmet`,
+      resolve: `gatsby-plugin-react-helmet`
     },
     {
-      resolve: `gatsby-plugin-typescript`,
+      resolve: `gatsby-plugin-typescript`
     },
     {
-      resolve: `gatsby-plugin-lodash`,
+      resolve: `gatsby-plugin-lodash`
     },
     // {
     //   resolve: 'gatsby-plugin-mailchimp',
@@ -155,7 +155,7 @@ module.exports = {
         // username: ,
         // access_token: ,
         // instagram_id: ,
-      },
+      }
     },
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
@@ -163,14 +163,14 @@ module.exports = {
         fonts: [
           {
             family: `Poppins`,
-            variants: [`300`, `400`, `500`, `600`, `700`],
+            variants: [`300`, `400`, `500`, `600`, `700`]
           },
           {
             family: `Fira Sans`,
-            variants: [`100`, `300`, `400`, `500`, `600`, `700`],
-          },
-        ],
-      },
-    },
-  ],
+            variants: [`100`, `300`, `400`, `500`, `600`, `700`]
+          }
+        ]
+      }
+    }
+  ]
 };

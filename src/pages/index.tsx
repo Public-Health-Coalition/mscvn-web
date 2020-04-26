@@ -11,7 +11,7 @@ import {
   HomeQuery,
   DirectusSchool,
   DirectusContributor,
-  DirectusPartner
+  DirectusPartner,
 } from '../../generated/types';
 import Partners from '../containers/home/Partners';
 
@@ -21,7 +21,6 @@ export interface HomeProps {
   data: HomeQuery;
 }
 
-
 const Home: FC<HomeProps> = (props: HomeProps) => {
   const { data } = props;
 
@@ -29,9 +28,7 @@ const Home: FC<HomeProps> = (props: HomeProps) => {
     (schoolEdge: SchoolEdge) => schoolEdge.node
   ) as DirectusSchool[];
 
-
-  const partners = data.allDirectusPartner
-    .nodes as DirectusPartner[];
+  const partners = data.allDirectusPartner.nodes as DirectusPartner[];
 
   const contributors = data.allDirectusContributor
     .nodes as DirectusContributor[];

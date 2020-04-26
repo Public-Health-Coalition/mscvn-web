@@ -36,7 +36,7 @@ const BlogList = (props: any) => {
               '#e17055',
               '#0984e3',
               '#badc58',
-              '#c7ecee',
+              '#c7ecee'
             ];
             const setColor =
               placeholderColors[
@@ -104,7 +104,18 @@ export const pageQuery = graphql`
             cover {
               childImageSharp {
                 fluid(maxWidth: 1170, quality: 90) {
-                  ...GatsbyImageSharpFluid_noBase64
+                  tracedSVG
+                  srcWebp
+                  srcSetWebp
+                  srcSet
+                  src
+                  sizes
+                  presentationWidth
+                  presentationHeight
+                  originalName
+                  originalImg
+                  base64
+                  aspectRatio
                 }
               }
             }
