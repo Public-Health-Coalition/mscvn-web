@@ -112,7 +112,7 @@ const Contributors: React.FunctionComponent<ContributorsProps> = (
             Libby Wetterer, Lillian Boettcher, Lindsay Edwards, Lucia Garcia, Luke Wachsmuth, Lyba Zia, Maddie Ford,
             Maddie Lorentzen, Madeline Rukavina, Maggie Gonzalez, Maggie Urschler, Mahtab Danai, Maria Khan, Mariana Olivencia,
             Martha Duah, Matt Diorio, Matthew Christensen, Matthew Hey, Matthew Lovell, Matthew Tan, Matty Chavez,
-            Maureen Ikpeama, Megan Chiu, Meghan Lane, Michael Broderick, Michael Martins, Michael Supanich , Mitchell Le,
+            Maureen Ikpeama, Megan Chiu, Meghan Lane, Michael Broderick, Michael Martins, Michael Supanich, Mitchell Le,
             Moena Nishikawa, Moena Nishikawa, Morgan Kennedy, Mychael Delgardo, Nashali Ferrara, Natasha Mehta,
             Nathan Zaroban, Naz Sarpoulaki, Nicolas Rubel, Nicole Sheikholeslami, Nidhi Goel, Nidhi Sheth,
             Nikki Shah, Nivedha Sukumar, Noelle Lemons, Parisun Shoga, Peter Alsharif, Peter Lorenz, Pooja Patel,
