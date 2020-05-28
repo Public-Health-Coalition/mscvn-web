@@ -30,38 +30,25 @@ const Welcome: React.FunctionComponent<WelcomeProps> = () => {
             <ImageWrapper>
               <img src={socialDistancingSvg} width="100%" />
             </ImageWrapper>
-            This is a difficult time for our world. As it stands, there have
-            been over 5,000,000 cases of COVID-19, and that number is rising
-            daily. At a time when healthcare workers and volunteers around the
-            globe are risking their health and well-being for the safety of the
-            community, we must help. That’s why we've started the Medical
-            Student COVID-19 Action Network, a united alliance for medical
-            students nationwide to play a role in fighting COVID-19.
+            The COVID-19 pandemic is a unique challenge for our world.
+            That’s why we've started the Medical Student COVID-19 Action Network,
+            a united nationwide alliance of medical students serving the community
+            during these difficult times.
             <Box mb={40} />
-            Our team will maintain an interactive digital map of the United
-            States showing all COVID-19-related service opportunities organized
-            by medical schools (especially ones that can be done safely at
-            home). Our goal is to set an example for the nation as medical
-            students, help displaced students serve from home, alleviate the
-            existing burden on the healthcare system, combine resources, support
-            medical workers, and promote the exchange of ideas.
-            <Box mb={40} />
-            We encourage you to engage with the opportunities on this map.
-            Please note that activities without contact information may be
-            internal or no longer seeking volunteers. Additionally, please
-            exercise caution and view our{' '}
+            Our mission is twofold: (1) to show COVID-19 service opportunities
+            organized by all medical schools in the U.S. and (2) to make the science behind
+            COVID-19 understandable to the public at our{' '}
             <a
-              href="https://publichealthcoalition.org/public-disclaimer/"
+              href="https://www.youtube.com/channel/UCZcBF-uqP37PKMNN42BrA6A"
               target="_blank"
             >
-              statement on activity safety
-            </a>
-            .
+              online channel
+            </a>.
             <Box mb={40} />
-            Let’s present a united front as future healthcare professionals and
-            support the amazing work already being done to stem the tide of
-            COVID-19. Let’s show the world that we’re ready to step up and
-            serve.
+            Our goal is to help others serve from home, support our healthcare workers,
+            combine resources, and exchange ideas. Let’s do our part as
+            future healthcare professionals to support the amazing work being done
+            to stem the tide of COVID-19!
           </Text>
         </Flex>
       </BlogWelcomeWrapper>
