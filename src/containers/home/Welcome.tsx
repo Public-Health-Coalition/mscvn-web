@@ -35,20 +35,19 @@ const Welcome: React.FunctionComponent<WelcomeProps> = () => {
             a united nationwide alliance of medical students serving the community
             during these difficult times.
             <Box mb={40} />
-            Our mission is twofold: (1) to show COVID-19 service opportunities
-            organized by all medical schools in the U.S. and (2) to make the science behind
+            Our mission is twofold: (1) to display all COVID-19 service opportunities
+            organized by medical schools in the U.S. and (2) to make the science behind
             COVID-19 understandable to the public at our{' '}
             <a
               href="https://www.youtube.com/channel/UCZcBF-uqP37PKMNN42BrA6A"
               target="_blank"
             >
-              online channel
+              online video channel
             </a>.
             <Box mb={40} />
-            Our goal is to help others serve from home, support our healthcare workers,
-            combine resources, and exchange ideas. Let’s do our part as
-            future healthcare professionals to support the amazing work being done
-            to stem the tide of COVID-19!
+            As future healthcare professionals, we are enabling others to serve,
+            supporting our medical workers, and promoting the exchange of ideas and resources.
+            Join us as we seek to make a positive difference!
           </Text>
         </Flex>
       </BlogWelcomeWrapper>
