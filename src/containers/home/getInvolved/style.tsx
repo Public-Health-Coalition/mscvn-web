@@ -11,7 +11,7 @@ export const NewsletterWrapper = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 3px;
-  margin-top: 120px;
+  margin-top: 0px;
 
   @media (max-width: 990px) {
     margin-top: 90px;
