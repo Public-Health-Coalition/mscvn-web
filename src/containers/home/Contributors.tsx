@@ -2,8 +2,10 @@ import * as React from 'react';
 import { Heading, Flex, Box, Link, Text } from '@primer/components';
 import BlogContributorsWrapper from './contributors/style';
 import Contributor from './contributors/Contributor';
+import Contributor from './contributors/VideoContributor';
 import siliconHillsJpg from '../../images/siliconhills.jpg';
 import { DirectusContributor } from '../../../generated/types';
+import { DirectusVideoContributor } from '../../../generated/types';
 
 type ContributorsProps = {
   contributors: DirectusContributor[];
@@ -14,6 +16,27 @@ const Contributors: React.FunctionComponent<ContributorsProps> = (
 ) => {
   function renderContributors() {
     return props.contributors.map((contributor: DirectusContributor) => (
+      <Flex flex="1 1 20%" justifyContent="center">
+        <Contributor
+          bio={contributor?.bio!}
+          homepage={contributor?.homepage!}
+          name={contributor?.name!}
+          photo={contributor?.photo!}
+          title={contributor?.title!}
+        />
+      </Flex>
+    ));
+  }
+  
+type VideoContributorsProps = {
+  contributors: DirectusVideoContributor[];
+};
+
+const VideoContributors: React.FunctionComponent<VideoContributorsProps> = (
+  props: VideoContributorsProps
+) => {
+  function renderVideoContributors() {
+    return props.contributors.map((contributor: DirectusVideoContributor) => (
       <Flex flex="1 1 20%" justifyContent="center">
         <Contributor
           bio={contributor?.bio!}
@@ -81,6 +104,9 @@ const Contributors: React.FunctionComponent<ContributorsProps> = (
         </Flex>
         <Flex justifyContent="space-between" flexWrap="wrap">
           {renderContributors()}
+        </Flex>
+        <Flex justifyContent="space-between" flexWrap="wrap">
+          {renderVideoContributors()}
         </Flex>
         <Heading textAlign="center" mb={10}>
           Additional Contributors
