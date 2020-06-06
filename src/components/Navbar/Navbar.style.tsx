@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { themeGet } from 'styled-system';
 
 const HeaderWrapper = styled.header`
-  position: relative;
+  position: static;
   z-index: 99999;
   transition: 0.25s ease-in-out;
 `;
@@ -102,7 +102,7 @@ export const SearchCloseButton = styled.button`
   background: transparent;
   border: 0;
   outline: none;
-  position: relative;
+  position: static;
   cursor: pointer;
   z-index: 1;
   padding: 0;
@@ -180,7 +180,7 @@ export const NavSearchFromWrapper = styled.div`
   margin: auto;
   width: 100%;
   height: 100%;
-  position: relative;
+  position: static;
   @media (min-width: 990px) {
     width: 900px;
   }
@@ -212,7 +212,7 @@ export const DrawerContentWrapper = styled.div`
       margin: 0 0 38px 0;
       a {
         display: block;
-        position: relative;
+        position: static;
         padding-left: 30px;
         padding-right: 30px;
         &.active-link {
