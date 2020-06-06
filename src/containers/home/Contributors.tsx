@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Heading, Flex, Box, Link, Text } from '@primer/components';
 import BlogContributorsWrapper from './contributors/style';
 import Contributor from './contributors/Contributor';
-import Contributor from './contributors/VideoContributor';
+import VideoContributor from './contributors/VideoContributor';
 import siliconHillsJpg from '../../images/siliconhills.jpg';
 import { DirectusContributor } from '../../../generated/types';
 import { DirectusVideoContributor } from '../../../generated/types';
