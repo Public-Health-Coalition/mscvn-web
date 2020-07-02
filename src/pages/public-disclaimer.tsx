@@ -11,7 +11,7 @@ const PublicDisclaimer: FC<PublicDisclaimerProps> = (
 ) => {
   return (
     <Layout>
-      <SEO title="PublicDisclaimer" description="privacy policy" />
+      <SEO title="Public Disclaimer" description="privacy policy" />
       <Flex alignItems="center" flexDirection="column">
         <Box padding={10} maxWidth={1200}>
           <PublicDisclaimerMdx />
