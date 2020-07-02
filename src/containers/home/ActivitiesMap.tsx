@@ -68,7 +68,7 @@ const ActivityMap: FC<ActivityMapProps> = (props: ActivityMapProps) => {
     <BannerWrapper>
       <Flex justifyContent="center" flexDirection="column">
         <Heading fontSize={8} textAlign="center" mb={2} p={2}>
-          Medical Student COVID-19 Action Network (MSCAN)
+          THE MSCAN PROJECT
         </Heading>
         <Heading fontSize={6} textAlign="center" p={1}>
           Choose Your State
