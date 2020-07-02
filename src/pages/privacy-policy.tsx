@@ -9,7 +9,7 @@ export interface PrivacyPolicyProps {}
 const PrivacyPolicy: FC<PrivacyPolicyProps> = (_props: PrivacyPolicyProps) => {
   return (
     <Layout>
-      <SEO title="PrivacyPolicy" description="privacy policy" />
+      <SEO title="Privacy Policy" description="privacy policy" />
       <Flex alignItems="center" flexDirection="column">
         <Box padding={10} maxWidth={1200}>
           <PrivacyPolicyMdx />
