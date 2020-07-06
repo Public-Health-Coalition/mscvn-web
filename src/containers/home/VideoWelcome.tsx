@@ -2,22 +2,12 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { Heading, Flex, Text, Box } from '@primer/components';
 import BlogWelcomeWrapper from './welcome/style';
-import socialDistancingSvg from '../../images/social_distancing.svg';
 import { FaYoutube } from 'react-icons/fa';
-export const ImageWrapper = styled.div`
-  float: left;
-  max-width: 30vw;
-  min-width: 400px;
-  padding-bottom: 40px;
-  padding-right: 60px;
-  @media only screen and (max-width: 500px) {
-    min-width: 300px;
-  }
-`;
+
 
 export interface WelcomeProps { }
 
-const Welcome: React.FunctionComponent<WelcomeProps> = () => {
+const VideoWelcome: React.FunctionComponent<WelcomeProps> = () => {
   return (
     <>
       <Box id="welcome" />
@@ -55,4 +45,4 @@ const Welcome: React.FunctionComponent<WelcomeProps> = () => {
   );
 };
 
-export default Welcome;
+export default VideoWelcome;
