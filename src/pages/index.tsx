@@ -5,7 +5,7 @@ import Contributors from '../containers/home/Contributors';
 import GetInvolved from '../containers/home/GetInvolved';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import Welcome from '../containers/home/Welcome';
+import Welcome from '../containers/home/VideoWelcome';
 import thumbnail from '../../content/assets/thumbnail.jpg';
 import {
   HomeQuery,
@@ -14,6 +14,7 @@ import {
   DirectusPartner
 } from '../../generated/types';
 import Partners from '../containers/home/Partners';
+import VideoWelcome from '../containers/home/VideoWelcome';
 
 type SchoolEdge = HomeQuery['allDirectusSchool']['edges'][0];
 
@@ -41,7 +42,7 @@ const Home: FC<HomeProps> = (props: HomeProps) => {
         twitterThumbnail={thumbnail}
       />
       <ActivitiesMap schools={schools} />
-      <Welcome />
+      <VideoWelcome />
       <GetInvolved />
       <Partners partners={partners} />
       <Contributors contributors={contributors} />

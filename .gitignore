@@ -72,3 +72,4 @@ pnpm-lock.yaml
 package-lock.json
 /generated
 /public
+/reduxcache*

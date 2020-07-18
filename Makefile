@@ -95,6 +95,7 @@ docker-build:
 
 .PHONY: start
 start: install
+	
 	@gatsby develop
 
 .PHONY: purge
