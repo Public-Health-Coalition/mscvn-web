@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import { IoMdArrowRoundBack } from 'react-icons/io';
-import ImageWrapper from '../home/Welcome';
+import ImageWrapper from '../home/VideoWelcome';
 import {
   NotFoundWrapper,
   NotFoundContent,
