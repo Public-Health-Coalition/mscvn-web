@@ -4,29 +4,31 @@ import BlogPostsWrapper from './welcome/style';
 import { FaYoutube } from 'react-icons/fa';
 
 const { useEffect, useState } = React;
-export interface WelcomeProps { }
+export interface WelcomeProps {}
 
 const VideoWelcome: React.FunctionComponent<WelcomeProps> = () => {
-  const scale = .5
-  const minWidth = 800
-  const [width, setWidth] = useState(calculateWidth(window.innerWidth))
-  const height = (9 / 16) * width
+  const scale = 0.5;
+  const minWidth = 800;
+  const [width, setWidth] = useState(
+    calculateWidth(typeof window === 'undefined' ? 0 : window.innerWidth)
+  );
+  const height = (9 / 16) * width;
 
   useEffect(() => {
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   function calculateWidth(width: number): number {
-    if (width < minWidth) return width
-    return width * scale
+    if (width < minWidth) return width;
+    return width * scale;
   }
 
   function handleResize(e: any) {
-    const height = e.target.innerHeight
-    const width = e.target.innerWidth
-    setWidth(calculateWidth(width))
-    console.log(height, width)
+    const height = e.target.innerHeight;
+    const width = e.target.innerWidth;
+    setWidth(calculateWidth(width));
+    console.log(height, width);
   }
 
   return (
