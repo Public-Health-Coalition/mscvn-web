@@ -112,7 +112,7 @@ const Contributors: React.FunctionComponent<ContributorsProps> = (
             Sonia Laumbach, Dr. Wolfgang Gilliar, Elaf Alsalamy, Ellie
             Volpicelli, Eloho Akpovi, Emily Crawford, Emily Lopez Santa, Emily
             Northey, Emily Root, Emily Trudeau, Emma Dunne, Eric Chow, Eric
-            Daubach, Eric Nelson, Erin Adams, Estefanía Montañez, Frances Gill,
+            Daubach, Eric Nelson, Erin Adams, Estefanía Montañez, Esther Kwon, Frances Gill,
             Francesca Yi, Gabe Garena, Gabriel Noble Cruz, Gabriela Cintron,
             Gabriella Miller, George Ye, Grace Lee, Grace Pratt, Grace Wholley,
             Halea Messe, Haley Esztovitz, Hannah Daneshvar, Hannah Meyer, Hannah
