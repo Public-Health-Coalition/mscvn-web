@@ -112,21 +112,21 @@ const Contributors: React.FunctionComponent<ContributorsProps> = (
             Sonia Laumbach, Dr. Wolfgang Gilliar, Elaf Alsalamy, Ellie
             Volpicelli, Eloho Akpovi, Emily Crawford, Emily Lopez Santa, Emily
             Northey, Emily Root, Emily Trudeau, Emma Dunne, Eric Chow, Eric
-            Daubach, Eric Nelson, Erin Adams, Estefanía Montañez, Esther Kwon, Frances Gill,
-            Francesca Yi, Gabe Garena, Gabriel Noble Cruz, Gabriela Cintron,
-            Gabriella Miller, George Ye, Grace Lee, Grace Pratt, Grace Wholley,
-            Halea Messe, Haley Esztovitz, Hannah Daneshvar, Hannah Meyer, Hannah
-            Rees, Hannah Tandon, Hermon Abera, Ikeanyi Chinonyelum, Jack
-            Doenges, Jake Fox, Jericho Hallare, Jess D'Annibale, Jessica Kelly,
-            Jessie Bangs, Jonah Moss, Jordan Haarsma, Jordan Lemme, Katie
-            McClung, Kavita Jain, Keely Reidelberger, Kevin Singh, Kime
-            McClintock, Kime McClintock, Kylie Miller, Laura Billstein, Lauran
-            Evans, Lauren Burgoon, Lauren Gard, Lauren Harris, Lawren Wooten,
-            Lawren Wooten, Leah Colucci, Lexy Kindt, Libby Wetterer, Libby
-            Wetterer, Lillian Boettcher, Lindsay Edwards, Lucia Garcia, Luke
-            Wachsmuth, Lyba Zia, Maddie Ford, Maddie Lorentzen, Madeline
-            Rukavina, Maggie Gonzalez, Maggie Urschler, Mahtab Danai, Maria
-            Khan, Mariana Olivencia, Martha Duah, Matt Diorio, Matthew
+            Daubach, Eric Nelson, Erin Adams, Estefanía Montañez, Esther Kwon,
+            Frances Gill, Francesca Yi, Gabe Garena, Gabriel Noble Cruz,
+            Gabriela Cintron, Gabriella Miller, George Ye, Grace Lee, Grace
+            Pratt, Grace Wholley, Halea Messe, Haley Esztovitz, Hannah
+            Daneshvar, Hannah Meyer, Hannah Rees, Hannah Tandon, Hermon Abera,
+            Ikeanyi Chinonyelum, Jack Doenges, Jake Fox, Jericho Hallare, Jess
+            D'Annibale, Jessica Kelly, Jessie Bangs, Jonah Moss, Jordan Haarsma,
+            Jordan Lemme, Katie McClung, Kavita Jain, Keely Reidelberger, Kevin
+            Singh, Kime McClintock, Kime McClintock, Kylie Miller, Laura
+            Billstein, Lauran Evans, Lauren Burgoon, Lauren Gard, Lauren Harris,
+            Lawren Wooten, Lawren Wooten, Leah Colucci, Lexy Kindt, Libby
+            Wetterer, Libby Wetterer, Lillian Boettcher, Lindsay Edwards, Lucia
+            Garcia, Luke Wachsmuth, Lyba Zia, Maddie Ford, Maddie Lorentzen,
+            Madeline Rukavina, Maggie Gonzalez, Maggie Urschler, Mahtab Danai,
+            Maria Khan, Mariana Olivencia, Martha Duah, Matt Diorio, Matthew
             Christensen, Matthew Hey, Matthew Lovell, Matthew Tan, Matty Chavez,
             Maureen Ikpeama, Megan Chiu, Meghan Lane, Michael Broderick, Michael
             Martins, Michael Supanich, Mitchell Le, Moena Nishikawa, Moena

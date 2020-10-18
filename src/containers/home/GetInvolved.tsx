@@ -70,10 +70,11 @@ const Newsletter: React.FunctionComponent<NewsletterProps> = ({ ...props }) => {
             <br /> <br />
           </Text>
           <Text fontSize={6}>
-            The COVID-19 pandemic is a unique challenge for our world.
-            That’s why we've started the Medical Student COVID-19 Action Network,
-            a united nationwide alliance of medical students making a positive
-            difference and serving the community during these difficult times. <br /> <br />
+            The COVID-19 pandemic is a unique challenge for our world. That’s
+            why we've started the Medical Student COVID-19 Action Network, a
+            united nationwide alliance of medical students making a positive
+            difference and serving the community during these difficult times.{' '}
+            <br /> <br />
             Interested in participating on our team or sending information for
             our map? Please email{' '}
             <a target="_blank" href="mailto:office.mscan@gmail.com">
