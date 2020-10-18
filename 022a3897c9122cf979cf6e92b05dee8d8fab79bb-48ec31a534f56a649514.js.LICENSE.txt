@@ -1,0 +1,4 @@
+/**
+ * @author  Milos Janda
+ * @licence MIT
+ */
