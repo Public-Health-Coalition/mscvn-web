@@ -12,6 +12,7 @@
     "@mikaelkristiansson/domready": "^1.0.10",
     "@reach/router": "^1.3.3",
     "@styled-system/theme-get": "^5.1.2",
+    "anser": "^2.0.1",
     "axios": "^0.19.2",
     "babel-plugin-styled-components": "^1.10.7",
     "disqus-react": "^1.0.8",
@@ -66,7 +67,9 @@
     "react-stickynode": "^2.1.1",
     "react-typography": "^0.16.19",
     "react-usa-map": "^1.4.0",
+    "regenerator-runtime": "^0.13.7",
     "shallow-compare": "^1.2.2",
+    "stack-trace": "^0.0.10",
     "styled-components": "^5.0.1",
     "styled-system": "^4.1.0",
     "typeface-merriweather": "^0.0.72",
@@ -97,7 +100,8 @@
     "gatsby-source-filesystem": "^2.7.0",
     "gh-pages": "^2.2.0",
     "jest": "^25.2.3",
-    "prettier": "^2.0.2"
+    "prettier": "^2.0.2",
+    "webpack-hot-middleware": "^2.25.0"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
