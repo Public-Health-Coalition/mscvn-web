@@ -64,7 +64,10 @@ const Newsletter: React.FunctionComponent<NewsletterProps> = ({ ...props }) => {
               <FaYoutube />
             </a>
             &nbsp;
-            <a target="_blank" href="https://www.instagram.com/themoreyouknow.covid19">
+            <a
+              target="_blank"
+              href="https://www.instagram.com/themoreyouknow.covid19"
+            >
               <FaInstagram />
             </a>
             <br /> <br />

@@ -4,13 +4,13 @@ ifeq ($(PLATFORM), win32)
 endif
 
 NPM := npm
-ifeq ($(shell pnpm --version >/dev/null 2>&1 && echo true || echo false), true)
-	NPM = pnpm
-else
+# ifeq ($(shell pnpm --version >/dev/null 2>&1 && echo true || echo false), true)
+#	NPM = pnpm
+# else
 ifeq ($(shell yarn --version >/dev/null 2>&1 && echo true || echo false), true)
 	NPM = yarn
 endif
-endif
+# endif
 
 GIT := true
 ifeq ($(shell git --version >/dev/null 2>&1 && echo true || echo false), true)
@@ -33,7 +33,7 @@ prepare:
 
 .PHONY: format
 format: install
-	@prettier --write ./**/*.{json,md,scss,yaml,yml,js,jsx,ts,tsx} --ignore-path .gitignore
+	@prettier --write ./**/*.{json,md,yaml,js,ts,tsx} --ignore-path .gitignore
 	@mkdir -p node_modules/.make && touch -m node_modules/.make/format
 node_modules/.make/format: $(shell $(GIT) ls-files | grep -E "\.(j|t)sx?$$")
 	@$(MAKE) -s format

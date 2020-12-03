@@ -20,7 +20,7 @@ module.exports = {
     {
       resolve: '@directus/gatsby-source-directus',
       options: {
-        url: 'http://206.189.162.161:30112',
+        url: 'https://data.publichealthcoalition.org',
         project: '_',
         auth: {
           email: process.env.DIRECTUS_EMAIL || '',
@@ -103,12 +103,6 @@ module.exports = {
           }
         ]
       }
-    },
-    {
-      resolve: `gatsby-transformer-sharp`
-    },
-    {
-      resolve: `gatsby-plugin-sharp`
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
