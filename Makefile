@@ -4,13 +4,13 @@ ifeq ($(PLATFORM), win32)
 endif
 
 NPM := npm
-# ifeq ($(shell pnpm --version >/dev/null 2>&1 && echo true || echo false), true)
-#	NPM = pnpm
-# else
+ifeq ($(shell pnpm --version >/dev/null 2>&1 && echo true || echo false), true)
+	NPM = pnpm
+else
 ifeq ($(shell yarn --version >/dev/null 2>&1 && echo true || echo false), true)
 	NPM = yarn
 endif
-# endif
+endif
 
 GIT := true
 ifeq ($(shell git --version >/dev/null 2>&1 && echo true || echo false), true)
